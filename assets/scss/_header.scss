@@ -1,0 +1,45 @@
+@use "./reset";
+@use "./var" as *;
+
+header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 48px;
+
+  .headerLogo {
+    height: 64px;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .headerNav--pc {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        li {
+          a {
+            font-size: 14px;
+            font-weight: 600;
+            color: $colorClasimazuGray3;
+          }
+        }
+      }
+    }
+  }
+}
