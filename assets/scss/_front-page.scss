@@ -82,11 +82,12 @@
         left: 50%;
 
         .mvCopy {
+          height: 104px;
         }
 
         .mvCopyText {
           margin-top: 40px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 2;
         }
 
@@ -146,14 +147,183 @@
 
   // clasimazuについて
   #aboutUs {
+    position: relative;
     width: 100%;
-    max-width: 1040px;
-    margin-inline: auto;
-    padding-block: 80px 40px;
 
-    .sectionTitleWrapper {
-      .sectionTitleJapanese {
+    .aboutUsInner {
+      max-width: 1040px;
+      margin-inline: auto;
+      padding-block: 80px;
+      .sectionTitleWrapper {
+        .sectionTitleJapanese {
+          span:last-child {
+            font-weight: 700;
+          }
+        }
       }
+
+      .aboutUsImage {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .button {
+        margin-top: 40px;
+        margin-inline: auto;
+      }
+    }
+
+    .aboutUsShape1 {
+      width: 538px;
+      height: 443px;
+      position: absolute;
+      top: 120px;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .aboutUsShape2 {
+      width: 538px;
+      height: 534px;
+      position: absolute;
+      bottom: -120px;
+      right: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // 代表メッセージ
+  #message {
+    position: relative;
+    width: 100%;
+    padding-block: 80px;
+    background: $colorCsBackground;
+
+    .messageInner {
+      width: calc(100% - ((100% - 1040px) / 2));
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 64px;
+
+      .messageLeft {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .messageText {
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 2;
+        }
+
+        .messageName {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-weight: 800;
+          line-height: 1;
+
+          span:first-child {
+            font-size: 16px;
+          }
+
+          span:last-child {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .messageRight {
+        width: 100%;
+
+        picture,
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 40px;
+      margin-inline: auto;
+    }
+
+    .messageShape1 {
+      width: 673px;
+      height: 665px;
+      position: absolute;
+      bottom: -400px;
+      left: -80px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // ctaエリア
+  #ctaArea {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    a {
+      z-index: 1;
+    }
+  }
+
+  // お問い合わせ
+  #contact {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: $colorCsBackground;
+    line-height: 1;
+
+    img {
+      width: 64px;
+      height: 64px;
+      aspect-ratio: 1;
+    }
+
+    .contactCta {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .contactTel {
+      font-family: "Futura", sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .contactBusinessHours {
+      font-size: 14px;
     }
   }
 }

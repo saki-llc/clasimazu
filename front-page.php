@@ -109,12 +109,98 @@
 </section>
 
 <section id="aboutUs">
-    <!-- セクションタイトルが特殊であるためこちらだけ静的に記載 -->
-    <hgroup class="sectionTitleWrapper">
-        <p class="sectionTitleEnglish">Concept</p>
-        <h2 class="sectionTitleJapanese">clas<span class="TextRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
-    </hgroup>
+    <div class="aboutUsInner">
+        <!-- セクションタイトルが特殊であるためこちらだけ静的に記載 -->
+        <hgroup class="sectionTitleWrapper">
+            <p class="sectionTitleEnglish">Concept</p>
+            <h2 class="sectionTitleJapanese">clas<span class="TextRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
+        </hgroup>
+        <picture class="aboutUsImage">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_sp@2x.webp 2x" media="max-width: <?php echo $spBreakPoint; ?>px">
+            <img
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc.webp"
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc@2x.webp 2x"
+                width="1040"
+                height="974"
+                alt="clasimazuについて" />
+        </picture>
+        <?php generateButtonMain('お問い合わせ', '#', 'button208'); ?>
+    </div>
+    <img class="aboutUsShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape3.svg"></img>
+    <img class="aboutUsShape2" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape4.svg"></img>
 </section>
 
+<section id="message">
+    <div class="messageInner">
+        <div class="messageLeft">
+            <?php generateSectionTitle('Message', '愛情・誠実・信頼'); ?>
+            <p class="messageText">
+                1965年の創業からこれまでお客様・お取引先様をはじめとする
+                <br />
+                多くの方々のご支援をいただき、地域に密着した商いをさせていただきました。
+                <br />
+                だからこそ私たち島津組スタッフは、
+                <br />
+                ご縁をいただくすべての方々に常に愛情と
+                <br />
+                感謝の心を持って業務を行う事を心がけております。
+                <br />
+                また会社の営みに欠かせない建物・不動産にも深い愛情を注ぎ、
+                <br />
+                地道に・真面目に・丁寧に、しっかりとしたサービスの
+                <br />
+                ご提供と万全のアフターメンテナンスを行います。
+                <br />
+                そしてスタッフ一人ひとりがお互いを信頼し合い、尊重し、
+                <br />
+                就業満足度を高めながらお客様満足に繋がる社風を醸成してまいります。
+                <br />
+                地域密着サービス企業がすべて消滅することは絶対にありません。
+                <br />
+                お客様がこの地域に快適な「くらし」を求められる以上は、
+                <br />
+                地元が育んだ商いは必ず愛されると信じています。
+                <br />
+                地域に必要とされる、なくてはならない会社を目指し、
+                <br />
+                地域に還元できる会社になることを、スタッフ一同夢見て頑張ります。
+                <br />
+            </p>
+            <p class="messageName">
+                <span>株式会社 島津組 代表取締役社長</span>
+                <span>島津 志朗</span>
+            </p>
+        </div>
+        <picture class="messageRight">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_sp@2x.webp 2x" media="max-width: <?php echo $spBreakPoint; ?>px">
+            <img
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp"
+                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc@2x.webp 2x"
+                width="500"
+                height="500"
+                alt="代表取締役社長 島津 志朗" />
+        </picture>
+    </div>
+    <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
+    <img class="messageShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape5.svg"></img>
+</section>
+
+<section id="ctaArea">
+    <?php generateButtonMain('お問い合わせはこちら', '#', 'button328'); ?>
+    <?php generateButtonMain('カタログダウンロード', '#', 'button328'); ?>
+</section>
+
+<section id="contact">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/front/contact_icon.svg" alt="携帯電話のアイコン">
+    <p class="contactCta">
+        お気軽にお問い合わせください
+    </p>
+    <a class="contactTel" href="tel:0120-475-008">
+        0120-475-008
+    </a>
+    <p class="contactBusinessHours">
+        電話受付時間：9：00〜17：00（定休日・水曜日）
+    </p>
+</section>
 
 <?php get_footer(); ?>

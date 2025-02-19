@@ -9,7 +9,7 @@
 =============================================== */
 function my_theme_scripts() {
   // Google Fonts
-  wp_enqueue_style('montserratFont', "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  wp_enqueue_style('montserratNotoFont', "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
 
   // Swiper
   wp_enqueue_style('swiperStyle', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
