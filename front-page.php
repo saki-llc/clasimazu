@@ -124,7 +124,7 @@
                 height="974"
                 alt="clasimazuについて" />
         </picture>
-        <?php generateButtonMain('お問い合わせ', '#', 'button208'); ?>
+        <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
     </div>
     <img class="aboutUsShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape3.svg"></img>
     <img class="aboutUsShape2" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape4.svg"></img>

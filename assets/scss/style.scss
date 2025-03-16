@@ -14,7 +14,7 @@ Version: 1.0
 
 // // 個別ファイル読み込み 固定
 @use "./header";
-// @use "./footer";
+@use "./footer";
 
 // // 個別ファイル読み込み 追加
-@use "./front-page";
+@use "./pages/front-page";
