@@ -708,6 +708,90 @@ a {
   font-size: 14px;
 }
 
+/* ===============================================
+ *  戻るボタン
+ =============================================== */
+.backButton {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+  padding: 12px 32px;
+  border-radius: 50vh;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.backButton p {
+  font-weight: 500;
+  font-size: 20px;
+}
+@media screen and (max-width: 960px) {
+  .backButton {
+    margin-top: 40px;
+  }
+}
+
+.arrow32 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid;
+  font-size: 12px;
+  background: #1a2c44;
+  color: #fff;
+}
+
+/* ===============================================
+ *  ページネーション
+ =============================================== */
+.pagination {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 80px;
+}
+.pagination .page-numbers {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: #aaaaaa;
+}
+.pagination .page-numbers.current {
+  color: #1a2c44;
+}
+.pagination .page-numbers.prev, .pagination .page-numbers.next {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1a2c44;
+  color: #fff;
+  font-size: 12px;
+}
+.pagination .page-numbers.prev {
+  margin-right: 16px;
+}
+.pagination .page-numbers.next {
+  margin-left: 16px;
+}
+@media screen and (max-width: 960px) {
+  .pagination {
+    margin-top: 40px;
+  }
+  .pagination .page-numbers {
+    font-size: 16px;
+  }
+}
+
 /*
 Theme Name: くらしまず 2025
 Author: Fujisaki Wahei
@@ -1053,6 +1137,12 @@ Version: 1.0
 .home #ctaArea a {
   z-index: 1;
 }
+@media screen and (max-width: 960px) {
+  .home #contact {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 
 /*
 Theme Name: くらしまず 2025
@@ -1060,10 +1150,10 @@ Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
 */
-.page-id-7 .messageInner {
+.page-id-21 .messageInner {
   margin-top: 80px;
 }
-.page-id-7 .messageInner .messageContentsArea {
+.page-id-21 .messageInner .messageContentsArea {
   margin-top: 48px;
   margin-left: auto;
   display: flex;
@@ -1071,61 +1161,61 @@ Version: 1.0
   align-items: start;
   gap: 56px;
 }
-.page-id-7 .messageInner .messageContentsArea .messageLeft {
-  flex-shrink: 0;
+.page-id-21 .messageInner .messageContentsArea .messageLeft {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.page-id-7 .messageInner .messageContentsArea .messageLeft .messageText {
+.page-id-21 .messageInner .messageContentsArea .messageLeft .messageText {
   font-size: 14px;
   font-weight: 600;
   line-height: 2;
 }
-.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName {
+.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName {
   display: flex;
   align-items: center;
   gap: 16px;
   font-weight: 800;
   line-height: 1;
 }
-.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName span:first-child {
+.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName span:first-child {
   font-size: 16px;
 }
-.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName span:last-child {
+.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName span:last-child {
   font-size: 24px;
 }
-.page-id-7 .messageInner .messageContentsArea .messageRight {
-  width: 100%;
+.page-id-21 .messageInner .messageContentsArea .messageRight {
+  flex-shrink: 0;
+  width: 552px;
 }
-.page-id-7 .messageInner .messageContentsArea .messageRight picture,
-.page-id-7 .messageInner .messageContentsArea .messageRight img,
-.page-id-7 .messageInner .messageContentsArea .messageRight source {
+.page-id-21 .messageInner .messageContentsArea .messageRight picture,
+.page-id-21 .messageInner .messageContentsArea .messageRight img,
+.page-id-21 .messageInner .messageContentsArea .messageRight source {
   width: 100%;
   height: auto;
 }
-.page-id-7 .messageInner .button {
+.page-id-21 .messageInner .button {
   margin-top: 40px;
   margin-inline: auto;
 }
 @media screen and (max-width: 960px) {
-  .page-id-7 .messageInner {
+  .page-id-21 .messageInner {
     margin-top: 32px;
     flex-direction: column;
   }
-  .page-id-7 .messageInner .messageContentsArea {
+  .page-id-21 .messageInner .messageContentsArea {
     margin-top: 16px;
     flex-direction: column-reverse;
     gap: 24px;
   }
-  .page-id-7 .messageInner .messageContentsArea .messageLeft {
+  .page-id-21 .messageInner .messageContentsArea .messageLeft {
     width: 100%;
   }
-  .page-id-7 .messageInner .messageContentsArea .messageLeft .messageName {
+  .page-id-21 .messageInner .messageContentsArea .messageLeft .messageName {
     flex-direction: column;
     align-items: flex-end;
   }
-  .page-id-7 .messageInner .messageContentsArea .messageRight {
+  .page-id-21 .messageInner .messageContentsArea .messageRight {
     width: 100%;
   }
 }
@@ -1136,81 +1226,81 @@ Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
 */
-.page-id-9 .successStoryInner {
+.page-id-24 .successStoryInner {
   margin-top: 80px;
 }
-.page-id-9 .successStoryInner .successStoryItem:not(:first-child) {
+.page-id-24 .successStoryInner .successStoryItem:not(:first-child) {
   margin-top: 80px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle {
   font-size: 22px;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle::before {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle::before {
   content: "";
   display: block;
   width: 24px;
   height: 2px;
   background: #ac0018;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemDescription {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemDescription {
   margin-top: 24px;
   font-size: 16px;
   line-height: 1.8;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome {
   margin-top: 44px;
   padding-top: 16px;
   border-top: 1px solid #1a2c44;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeTitle {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeTitle {
   font-size: 22px;
   font-weight: 700;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
   margin-top: 32px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
   margin-top: 12px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
   min-width: 180px;
   font-size: 16px;
 }
-.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeValue {
+.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeValue {
   font-size: 16px;
   font-weight: 700;
 }
 @media screen and (max-width: 960px) {
-  .page-id-9 .successStoryInner {
+  .page-id-24 .successStoryInner {
     margin-top: 32px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle {
     font-size: 18px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome {
     margin-top: 24px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
     margin-top: 16px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
     flex-direction: column;
     align-items: start;
     gap: 4px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
     margin-top: 24px;
   }
-  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
     min-width: none;
     width: 100%;
     font-size: 14px;
@@ -1222,4 +1312,474 @@ Theme Name: くらしまず 2025
 Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
-*//*# sourceMappingURL=style.css.map */
+*/
+.single-news .singleNewsInner {
+  margin-top: 80px;
+}
+.single-news .singleNewsInner .singleNewsInfoArea .singleNewsDate {
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+}
+.single-news .singleNewsInner .singleNewsInfoArea .singleNewsTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.single-news .singleNewsInner .singleNewsInfoArea .singleNewsTitle::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ac0018;
+}
+.single-news .singleNewsInner .singleNewsInfoArea .singleNewsThumbnail {
+  margin-top: 40px;
+  width: 100%;
+  aspect-ratio: 1040/640;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.single-news .singleNewsInner .singleNewsInfoArea .singleNewsThumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single-news .singleNewsInner .singleNewsContent {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.single-news .singleNewsInner .singleNewsContent p:not(:first-child) {
+  margin-top: 32px;
+}
+.single-news .singleNewsInner .singleNewsContent figure {
+  margin-top: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.single-news .singleNewsInner .singleNewsContent figure img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single-news .singleNewsInner .singleNewsContent .wp-block-gallery {
+  display: flex;
+  gap: 24px;
+}
+.single-news .singleNewsInner .singleNewsContent .wp-block-gallery figure {
+  flex: 1;
+}
+@media screen and (max-width: 960px) {
+  .single-news .singleNewsInner {
+    margin-top: 32px;
+  }
+  .single-news .singleNewsInner .singleNewsInfoArea .singleNewsTitle {
+    margin-top: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 18px;
+  }
+  .single-news .singleNewsInner .singleNewsInfoArea .singleNewsTitle::before {
+    transform: translateY(13px);
+    width: 16px;
+  }
+  .single-news .singleNewsInner .singleNewsInfoArea .singleNewsThumbnail {
+    margin-top: 16px;
+    border-radius: 8px;
+  }
+  .single-news .singleNewsInner .singleNewsContent {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .single-news .singleNewsInner .singleNewsContent .wp-block-gallery {
+    gap: 16px;
+  }
+  .single-news .singleNewsInner .singleNewsContent figure {
+    border-radius: 8px;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.post-type-archive-news .archiveNewsInner {
+  margin-top: 80px;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList {
+  display: flex;
+  flex-direction: column;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
+  flex-shrink: 0;
+  width: 183px;
+  height: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText {
+  max-width: 392px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemDate {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemExcerpt {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid;
+  font-size: 12px;
+  border: 1px solid #1a2c44;
+  color: #1a2c44;
+}
+@media screen and (max-width: 960px) {
+  .post-type-archive-news .archiveNewsInner {
+    margin-top: 32px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem {
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
+    width: 120px;
+    height: 88px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText {
+    padding-right: 40px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemDate {
+    font-size: 10px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemTitle {
+    font-size: 12px;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemExcerpt {
+    display: none;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-29 .formPageInner {
+  padding-top: 100px;
+  height: auto;
+}
+.page-id-29 .formPageInner .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock:nth-child(14) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .formLabel {
+  flex-shrink: 0;
+  width: 180px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
+  width: 100%;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=text],
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=textbox],
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=tel],
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=email],
+.page-id-29 .formPageInner .wpcf7-form .formBlock textarea,
+.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  padding-inline: 32px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock textarea {
+  height: 234px;
+  padding: 20px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+  width: 342px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[placeholder=例）6830009] {
+  width: 342px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item {
+  margin-inline: 0;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ac0018;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item {
+  margin-inline: 0;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #ac0018;
+}
+.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-list-item label,
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=checkbox],
+.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=radio],
+.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+  cursor: pointer;
+}
+.page-id-29 .formPageInner .wpcf7-form.invalid .wpcf7-response-output {
+  border: none;
+  align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .page-id-29 .formPageInner {
+    padding-top: 32px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .formLabel {
+    width: 100%;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
+    width: 100%;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=text],
+  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=textbox],
+  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=tel],
+  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=email],
+  .page-id-29 .formPageInner .wpcf7-form .formBlock textarea,
+  .page-id-29 .formPageInner .wpcf7-form .formBlock select {
+    height: 48px;
+    padding-inline: 16px;
+    font-size: 14px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock select {
+    width: 184px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap[data-name=age] {
+    position: relative;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap[data-name=age]::after {
+    content: "↓";
+    position: absolute;
+    top: 50%;
+    left: 140px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock textarea {
+    height: 200px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
+    row-gap: 12px;
+  }
+  .page-id-29 .formPageInner .wpcf7-form .submitWrapper {
+    margin-top: 40px;
+  }
+}
+
+.page-id-158 .contactConfirmInner {
+  padding-top: 80px;
+  height: auto;
+}
+.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow:nth-child(14) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
+  width: 240px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
+  width: calc(100% - 240px);
+}
+@media screen and (max-width: 960px) {
+  .page-id-158 .contactConfirmInner {
+    padding-top: 48px;
+  }
+  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .page-id-158 .contactConfirmInner .wpcf7-form .submitWrapper {
+    margin-top: 32px;
+  }
+}
+
+/*
+  共通
+=============================================== */
+.submitWrapper {
+  margin-top: 80px;
+  margin-inline: auto;
+  position: relative;
+}
+.submitWrapper .buttonCopy {
+  font-size: 18px;
+}
+.submitWrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.required::after {
+  content: "*";
+  margin-left: 10px;
+  font-size: 16px;
+  color: #ac0018;
+}
+@media screen and (max-width: 960px) {
+  .required::after {
+    margin-left: 4px;
+  }
+}/*# sourceMappingURL=style.css.map */

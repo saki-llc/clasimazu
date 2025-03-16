@@ -1,5 +1,30 @@
 <?php get_header(); ?>
 <?php generateSubPageHeader('お知らせ', 'News'); ?>
 
+<?php
+$title = get_the_title();
+$date = get_the_date();
+$content = get_the_content();
+$thumbnail = get_the_post_thumbnail_url();
+?>
+
+<div class="singleNewsInner inner1040">
+    <div class="singleNewsInfoArea">
+        <p class="singleNewsDate"><?php echo $date; ?></p>
+        <h2 class="singleNewsTitle"><?php echo $title; ?></h2>
+        <p class="singleNewsThumbnail">
+            <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>">
+        </p>
+    </div>
+    <div class="singleNewsContent">
+        <?php echo $content; ?>
+    </div>
+    <a href="<?php echo home_url('/archive-news'); ?>" class="backButton">
+        <div class="arrow32 blue">←</div>
+        <p>一覧に戻る</p>
+    </a>
+    <?php generateCTAComponent(); ?>
+    <?php generateContactComponent(); ?>
+</div>
 
 <?php get_footer(); ?>

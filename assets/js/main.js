@@ -10,3 +10,12 @@ const mvSwiper = new Swiper(".mvSwiper", {
     delay: 3000,
   },
 });
+
+/* ===============================================
+ *  郵便番号APIのために、フォームの操作
+ =============================================== */
+const forms = document.querySelectorAll(".wpcf7-form");
+
+forms.forEach((form) => {
+  form.classList.add("h-adr");
+});

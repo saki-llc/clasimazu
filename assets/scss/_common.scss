@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   letter-spacing: 0.05em;
   line-height: 1.6;
-  color: $colorClasimazuGray3;
+  color: $colorClasimazuNavy;
 }
 
 main {
@@ -64,8 +64,8 @@ a {
   justify-content: space-between;
   padding: 16px 24px;
   border-radius: 50vh;
-  background-color: $colorClasimazuGray3;
-  border: 1px solid $colorClasimazuGray3;
+  background-color: $colorClasimazuNavy;
+  border: 1px solid $colorClasimazuNavy;
   transition: all 0.3s linear;
 
   span:first-child {
@@ -119,11 +119,11 @@ a {
     background-color: $colorWhite;
 
     span:first-child {
-      color: $colorClasimazuGray3;
+      color: $colorClasimazuNavy;
     }
 
     span:last-child {
-      background-color: $colorClasimazuGray3;
+      background-color: $colorClasimazuNavy;
       color: $colorWhite;
     }
   }
@@ -346,5 +346,94 @@ a {
 
   .contactBusinessHours {
     font-size: 14px;
+  }
+}
+
+/* ===============================================
+ *  戻るボタン
+ =============================================== */
+.backButton {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+  padding: 12px 32px;
+  border-radius: 50vh;
+  width: fit-content;
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    margin-top: 40px;
+  }
+}
+
+.arrow32 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid;
+  font-size: 12px;
+  background: $colorClasimazuNavy;
+  color: $colorWhite;
+}
+
+/* ===============================================
+ *  ページネーション
+ =============================================== */
+.pagination {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 80px;
+
+  .page-numbers {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    color: $colorClasimazuGray2;
+
+    &.current {
+      color: $colorClasimazuNavy;
+    }
+
+    &.prev,
+    &.next {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: $colorClasimazuNavy;
+      color: $colorWhite;
+      font-size: 12px;
+    }
+
+    &.prev {
+      margin-right: 16px;
+    }
+
+    &.next {
+      margin-left: 16px;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    margin-top: 40px;
+
+    .page-numbers {
+      font-size: 16px;
+    }
   }
 }

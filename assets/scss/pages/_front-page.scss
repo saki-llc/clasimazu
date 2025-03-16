@@ -49,7 +49,7 @@
           .mvNewsSectionTitle {
             font-size: 14px;
             font-weight: 600;
-            color: $colorClasimazuGray3;
+            color: $colorClasimazuNavy;
           }
 
           .mvNewsContent {
@@ -290,6 +290,13 @@
 
     a {
       z-index: 1;
+    }
+  }
+
+  #contact {
+    @media screen and (max-width: $tabletBreakPoint) {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }

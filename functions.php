@@ -20,6 +20,9 @@ function my_theme_scripts() {
   // assets
   wp_enqueue_style("mainStyle", get_theme_file_uri('style.css'));
   wp_enqueue_script("mainJs", get_theme_file_uri('/assets/js/main.js'), array('swiperScript'), false, true);
+
+  // 郵便番号API
+  wp_enqueue_script('yubinbangoScript', "https://yubinbango.github.io/yubinbango/yubinbango.js", array(), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
@@ -66,9 +69,6 @@ function generateSubPageHeader($title, $english) { ?>
       <h1 class="subPageHeaderTitleJapanese"><?php echo $title; ?></h1>
       <p class="subPageHeaderTitleEnglish"><?php echo $english; ?></p>
     </hgroup>
-    <button class="pageTopButton">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/page-top_button.svg" alt="ページトップに戻る">
-    </button>
   </section>
 <?php }
 

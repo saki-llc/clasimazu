@@ -13,5 +13,5 @@
  */
 module.exports = {
   proxy: "http://clasimazudev.local/",
-  files: ["**/*.js", "**/*.php", "**/*.css"],
+  files: ["style.css", "**/*.php", "**/*.scss"],
 };

@@ -1,10 +1,11 @@
 {
   "name": "clasimazu",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browser": "browser-sync start --config bs-config.js"
+    "dev": "browser-sync start --server --files '*.html'"
   },
   "repository": {
     "type": "git",
@@ -13,11 +14,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/saki-llc/clasimazu/issues"
   },
   "homepage": "https://github.com/saki-llc/clasimazu#readme",
-  "description": "",
   "devDependencies": {
     "browser-sync": "^3.0.3"
   }
