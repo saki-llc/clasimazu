@@ -185,7 +185,6 @@
 </section>
 
 <?php generateCTAComponent(); ?>
-
 <?php generateContactComponent(); ?>
 
 <?php get_footer(); ?>

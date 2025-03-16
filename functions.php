@@ -1,13 +1,10 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 <?php
 
 /* ===============================================
   スクリプトとスタイルシートの読み込み
 =============================================== */
-function my_theme_scripts() {
+function my_theme_scripts()
+{
   // Google Fonts
   wp_enqueue_style('montserratNotoFont', "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
 
@@ -36,7 +33,8 @@ add_theme_support('post-thumbnails');
 /*
    ボタンを生成する関数
  =============================================== */
-function generateButtonMain($text, $link, $size = null, $color = null) { ?>
+function generateButtonMain($text, $link, $size = null, $color = null)
+{ ?>
   <a href="<?php echo $link; ?>" class="button <?php echo $size; ?> <?php echo $color; ?>">
     <span><?php echo $text; ?></span>
     <span>→</span>
@@ -46,7 +44,8 @@ function generateButtonMain($text, $link, $size = null, $color = null) { ?>
 /*
   セクションタイトルを生成する関数
 =============================================== */
-function generateSectionTitle($english, $japanese, $color = null) { ?>
+function generateSectionTitle($english, $japanese, $color = null)
+{ ?>
   <hgroup class="sectionTitleWrapper <?php echo $color; ?>">
     <p class="sectionTitleEnglish"><?php echo $english; ?></p>
     <h2 class="sectionTitleJapanese"><?php echo $japanese; ?></h2>
@@ -56,7 +55,8 @@ function generateSectionTitle($english, $japanese, $color = null) { ?>
 /* ===============================================
  *  サブページヘッダーを生成する関数
  =============================================== */
-function generateSubPageHeader($title, $english) { ?>
+function generateSubPageHeader($title, $english)
+{ ?>
   <section class="subPageHeader">
     <picture>
       <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/subpage_header_sp.svg" media="max-width: 960px">
@@ -75,7 +75,8 @@ function generateSubPageHeader($title, $english) { ?>
 /* ===============================================
  *  CTAコンポーネントを生成する関数
  =============================================== */
-function generateCTAComponent() { ?>
+function generateCTAComponent()
+{ ?>
   <section class="ctaComponent">
     <?php generateButtonMain('お問い合わせはこちら', '/contact', 'button328'); ?>
     <?php generateButtonMain('カタログダウンロード', '#', 'button328'); ?>
@@ -85,7 +86,8 @@ function generateCTAComponent() { ?>
 /* ===============================================
  *  お問い合わせコンポーネントを生成する関数
  =============================================== */
-function generateContactComponent() { ?>
+function generateContactComponent()
+{ ?>
   <section id="contact">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/front/contact_icon.svg" alt="携帯電話のアイコン">
     <p class="contactCta">

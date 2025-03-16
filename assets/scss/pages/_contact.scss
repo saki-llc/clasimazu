@@ -2,10 +2,10 @@
 @use "../var" as *;
 
 // 入力ページ
-.page-id-29 {
+
+.page-id-21 {
   .formPageInner {
-    padding-top: 100px;
-    height: auto;
+    margin-top: 80px;
 
     .wpcf7-form {
       display: flex;
@@ -30,9 +30,19 @@
           width: 180px;
           font-size: 16px;
           font-weight: 700;
+
+          P {
+            display: inline;
+          }
+        }
+
+        p:has(.wpcf7-form-control-wrap) {
+          display: block;
+          width: 100%;
         }
 
         .wpcf7-form-control-wrap {
+          display: block;
           width: 100%;
         }
 
@@ -150,6 +160,102 @@
         select {
           cursor: pointer;
         }
+
+        &.age {
+          .wpcf7-form-control-wrap {
+            position: relative;
+
+            &::after {
+              content: "↓";
+              position: absolute;
+              top: 50%;
+              left: 310px;
+              transform: translate(-100%, -50%);
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 1px solid $colorClasimazuGray2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 12px;
+              color: $colorClasimazuGray2;
+            }
+          }
+        }
+      }
+
+      .submitWrapper {
+        position: relative;
+        width: 268px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+        border-radius: 50vh;
+        background-color: $colorClasimazuNavy;
+        border: 1px solid $colorClasimazuNavy;
+        transition: all 0.3s linear;
+
+        .buttonCopy {
+          color: $colorWhite;
+        }
+
+        .buttonArrow {
+          br {
+            display: none;
+          }
+        }
+
+        p:nth-child(3) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+
+        &.button200 {
+          width: 200px;
+          height: 48px;
+
+          span:first-child {
+            font-size: 14px;
+          }
+        }
+
+        &.button208 {
+          width: 208px;
+          height: 64px;
+
+          span:first-child {
+            font-size: 18px;
+          }
+        }
+
+        &.button328 {
+          width: 328px;
+          height: 72px;
+
+          span:first-child {
+            font-size: 18px;
+          }
+        }
+
+        &:hover {
+          background-color: $colorWhite;
+
+          .buttonCopy {
+            color: $colorClasimazuNavy;
+          }
+
+          .buttonArrow {
+            background-color: $colorClasimazuNavy;
+            color: $colorWhite;
+            border-radius: 50%;
+          }
+        }
       }
 
       &.invalid .wpcf7-response-output {
@@ -161,7 +267,7 @@
 
   @media screen and (max-width: $tabletBreakPoint) {
     .formPageInner {
-      padding-top: 32px;
+      margin-top: 32px;
 
       .wpcf7-form {
         .formBlock {
@@ -191,27 +297,6 @@
             width: 184px;
           }
 
-          .wpcf7-form-control-wrap[data-name="age"] {
-            position: relative;
-
-            &::after {
-              content: "↓";
-              position: absolute;
-              top: 50%;
-              left: 140px;
-              transform: translateY(-50%);
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              border: 1px solid $colorClasimazuGray2;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 12px;
-              color: $colorClasimazuGray2;
-            }
-          }
-
           textarea {
             height: 200px;
           }
@@ -225,9 +310,17 @@
           .wpcf7-checkbox {
             row-gap: 12px;
           }
+
+          &.age {
+            .wpcf7-form-control-wrap {
+              &::after {
+                left: 168px;
+              }
+            }
+          }
         }
         .submitWrapper {
-          margin-top: 40px;
+          margin-top: 16px;
         }
       }
     }
@@ -235,8 +328,8 @@
 }
 
 // 確認画面
-.page-id-158 {
-  .contactConfirmInner {
+.page-id-27 {
+  .formConfirmPageInner {
     padding-top: 80px;
     height: auto;
 
@@ -249,10 +342,8 @@
         align-items: center;
         gap: 40px;
 
-        &:nth-child(14) {
-          margin-bottom: 0;
-          padding-bottom: 0;
-          border-bottom: none;
+        br {
+          display: none;
         }
 
         .contactConfirmRowTitle {
@@ -266,10 +357,82 @@
         }
       }
     }
+    .submitWrapper {
+      position: relative;
+      width: 268px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      border-radius: 50vh;
+      background-color: $colorClasimazuNavy;
+      border: 1px solid $colorClasimazuNavy;
+      transition: all 0.3s linear;
+
+      .buttonCopy {
+        color: $colorWhite;
+      }
+
+      .buttonArrow {
+        br {
+          display: none;
+        }
+      }
+
+      p:nth-child(3) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      &.button200 {
+        width: 200px;
+        height: 48px;
+
+        span:first-child {
+          font-size: 14px;
+        }
+      }
+
+      &.button208 {
+        width: 208px;
+        height: 64px;
+
+        span:first-child {
+          font-size: 18px;
+        }
+      }
+
+      &.button328 {
+        width: 328px;
+        height: 72px;
+
+        span:first-child {
+          font-size: 18px;
+        }
+      }
+
+      &:hover {
+        background-color: $colorWhite;
+
+        .buttonCopy {
+          color: $colorClasimazuNavy;
+        }
+
+        .buttonArrow {
+          background-color: $colorClasimazuNavy;
+          color: $colorWhite;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: $tabletBreakPoint) {
-    .contactConfirmInner {
+    .formConfirmPageInner {
       padding-top: 48px;
 
       .wpcf7-form {
@@ -330,7 +493,7 @@
 .required {
   &::after {
     content: "*";
-    margin-left: 10px;
+    margin-left: 4px;
     font-size: 16px;
     color: $colorClasimazuRed;
 

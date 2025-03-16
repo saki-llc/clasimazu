@@ -1,0 +1,58 @@
+@use "../reset";
+@use "../var" as *;
+
+.page-id-29 {
+  .thanksInner {
+    padding-top: 80px;
+    text-align: center;
+
+    .thanksTitle {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .thanksCopy {
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .thanksNote {
+      margin-top: 32px;
+      font-size: 14px;
+      color: $colorClasimazuRed;
+    }
+    .button {
+      margin-inline: auto;
+      margin-top: 48px;
+
+      .buttonCopy {
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    .thanksInner {
+      padding-top: 32px;
+
+      .thanksTitle {
+        font-size: 24px;
+      }
+
+      .thanksCopy {
+        margin-top: 40px;
+        font-weight: 600;
+      }
+
+      .thanksNote {
+        margin-top: 32px;
+      }
+
+      .button {
+        margin-top: 32px;
+      }
+    }
+  }
+}

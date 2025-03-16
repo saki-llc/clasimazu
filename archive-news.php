@@ -8,7 +8,8 @@
             'post_type' => 'news',
             'posts_per_page' => 5,
             'orderby' => 'date',
-            'order' => 'DESC'
+            'order' => 'DESC',
+            'paged' => $paged,
         );
 
         $query = new WP_Query($args);

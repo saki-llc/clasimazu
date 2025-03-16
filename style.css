@@ -910,7 +910,7 @@ Version: 1.0
 .home #mv .mvBottom {
   position: relative;
   background: #f8f6f1;
-  height: 630px;
+  height: 10000px;
 }
 .home #mv .mvBottom .mvNews {
   z-index: 1;
@@ -1507,41 +1507,48 @@ Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
 */
-.page-id-29 .formPageInner {
-  padding-top: 100px;
-  height: auto;
+.page-id-21 .formPageInner {
+  margin-top: 80px;
 }
-.page-id-29 .formPageInner .wpcf7-form {
+.page-id-21 .formPageInner .wpcf7-form {
   display: flex;
   flex-direction: column;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock {
+.page-id-21 .formPageInner .wpcf7-form .formBlock {
   display: flex;
   gap: 16px;
   padding-bottom: 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid #f0f0f0;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock:nth-child(14) {
+.page-id-21 .formPageInner .wpcf7-form .formBlock:nth-child(14) {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .formLabel {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .formLabel {
   flex-shrink: 0;
   width: 180px;
   font-size: 16px;
   font-weight: 700;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .formLabel P {
+  display: inline;
+}
+.page-id-21 .formPageInner .wpcf7-form .formBlock p:has(.wpcf7-form-control-wrap) {
+  display: block;
   width: 100%;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=text],
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=textbox],
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=tel],
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=email],
-.page-id-29 .formPageInner .wpcf7-form .formBlock textarea,
-.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=text],
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=textbox],
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=tel],
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=email],
+.page-id-21 .formPageInner .wpcf7-form .formBlock textarea,
+.page-id-21 .formPageInner .wpcf7-form .formBlock select {
   width: 100%;
   height: 80px;
   border-radius: 8px;
@@ -1550,38 +1557,38 @@ Version: 1.0
   display: flex;
   align-items: center;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock textarea {
+.page-id-21 .formPageInner .wpcf7-form .formBlock textarea {
   height: 234px;
   padding: 20px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+.page-id-21 .formPageInner .wpcf7-form .formBlock select {
   width: 342px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[placeholder=例）6830009] {
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[placeholder=例）6830009] {
   width: 342px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item {
   margin-inline: 0;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input {
   position: relative;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: 1px solid #aaaaaa;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input:checked::after {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio .wpcf7-list-item label input:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1592,29 +1599,29 @@ Version: 1.0
   border-radius: 50%;
   background-color: #ac0018;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item {
   margin-inline: 0;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input {
   position: relative;
   width: 16px;
   height: 16px;
   border: 1px solid #aaaaaa;
   border-radius: 4px;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input:checked::after {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox .wpcf7-list-item label input:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1625,83 +1632,144 @@ Version: 1.0
   border-radius: 2px;
   background-color: #ac0018;
 }
-.page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-list-item label,
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=checkbox],
-.page-id-29 .formPageInner .wpcf7-form .formBlock input[type=radio],
-.page-id-29 .formPageInner .wpcf7-form .formBlock select {
+.page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-list-item label,
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=checkbox],
+.page-id-21 .formPageInner .wpcf7-form .formBlock input[type=radio],
+.page-id-21 .formPageInner .wpcf7-form .formBlock select {
   cursor: pointer;
 }
-.page-id-29 .formPageInner .wpcf7-form.invalid .wpcf7-response-output {
+.page-id-21 .formPageInner .wpcf7-form .formBlock.age .wpcf7-form-control-wrap {
+  position: relative;
+}
+.page-id-21 .formPageInner .wpcf7-form .formBlock.age .wpcf7-form-control-wrap::after {
+  content: "↓";
+  position: absolute;
+  top: 50%;
+  left: 310px;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper {
+  position: relative;
+  width: 268px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-radius: 50vh;
+  background-color: #1a2c44;
+  border: 1px solid #1a2c44;
+  transition: all 0.3s linear;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper .buttonCopy {
+  color: #fff;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper .buttonArrow br {
+  display: none;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper p:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button200 {
+  width: 200px;
+  height: 48px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button200 span:first-child {
+  font-size: 14px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button208 {
+  width: 208px;
+  height: 64px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button208 span:first-child {
+  font-size: 18px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button328 {
+  width: 328px;
+  height: 72px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper.button328 span:first-child {
+  font-size: 18px;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper:hover {
+  background-color: #fff;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper:hover .buttonCopy {
+  color: #1a2c44;
+}
+.page-id-21 .formPageInner .wpcf7-form .submitWrapper:hover .buttonArrow {
+  background-color: #1a2c44;
+  color: #fff;
+  border-radius: 50%;
+}
+.page-id-21 .formPageInner .wpcf7-form.invalid .wpcf7-response-output {
   border: none;
   align-items: center;
 }
 @media screen and (max-width: 960px) {
-  .page-id-29 .formPageInner {
-    padding-top: 32px;
+  .page-id-21 .formPageInner {
+    margin-top: 32px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock {
     flex-direction: column;
     gap: 16px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .formLabel {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock .formLabel {
     width: 100%;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap {
     width: 100%;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=text],
-  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=textbox],
-  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=tel],
-  .page-id-29 .formPageInner .wpcf7-form .formBlock input[type=email],
-  .page-id-29 .formPageInner .wpcf7-form .formBlock textarea,
-  .page-id-29 .formPageInner .wpcf7-form .formBlock select {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock input[type=text],
+  .page-id-21 .formPageInner .wpcf7-form .formBlock input[type=textbox],
+  .page-id-21 .formPageInner .wpcf7-form .formBlock input[type=tel],
+  .page-id-21 .formPageInner .wpcf7-form .formBlock input[type=email],
+  .page-id-21 .formPageInner .wpcf7-form .formBlock textarea,
+  .page-id-21 .formPageInner .wpcf7-form .formBlock select {
     height: 48px;
     padding-inline: 16px;
     font-size: 14px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock select {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock select {
     width: 184px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap[data-name=age] {
-    position: relative;
-  }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-form-control-wrap[data-name=age]::after {
-    content: "↓";
-    position: absolute;
-    top: 50%;
-    left: 140px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid #aaaaaa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #aaaaaa;
-  }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock textarea {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock textarea {
     height: 200px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-radio {
     flex-direction: column;
     align-items: start;
     gap: 12px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
+  .page-id-21 .formPageInner .wpcf7-form .formBlock .wpcf7-checkbox {
     row-gap: 12px;
   }
-  .page-id-29 .formPageInner .wpcf7-form .submitWrapper {
-    margin-top: 40px;
+  .page-id-21 .formPageInner .wpcf7-form .formBlock.age .wpcf7-form-control-wrap::after {
+    left: 168px;
+  }
+  .page-id-21 .formPageInner .wpcf7-form .submitWrapper {
+    margin-top: 16px;
   }
 }
 
-.page-id-158 .contactConfirmInner {
+.page-id-27 .formConfirmPageInner {
   padding-top: 80px;
   height: auto;
 }
-.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow {
+.page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow {
   margin-bottom: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid #f0f0f0;
@@ -1709,41 +1777,97 @@ Version: 1.0
   align-items: center;
   gap: 40px;
 }
-.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow:nth-child(14) {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
+.page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow br {
+  display: none;
 }
-.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
+.page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
   width: 240px;
   font-size: 16px;
   font-weight: 600;
 }
-.page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
+.page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
   width: calc(100% - 240px);
 }
+.page-id-27 .formConfirmPageInner .submitWrapper {
+  position: relative;
+  width: 268px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-radius: 50vh;
+  background-color: #1a2c44;
+  border: 1px solid #1a2c44;
+  transition: all 0.3s linear;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper .buttonCopy {
+  color: #fff;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper .buttonArrow br {
+  display: none;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper p:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button200 {
+  width: 200px;
+  height: 48px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button200 span:first-child {
+  font-size: 14px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button208 {
+  width: 208px;
+  height: 64px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button208 span:first-child {
+  font-size: 18px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button328 {
+  width: 328px;
+  height: 72px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper.button328 span:first-child {
+  font-size: 18px;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper:hover {
+  background-color: #fff;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper:hover .buttonCopy {
+  color: #1a2c44;
+}
+.page-id-27 .formConfirmPageInner .submitWrapper:hover .buttonArrow {
+  background-color: #1a2c44;
+  color: #fff;
+  border-radius: 50%;
+}
 @media screen and (max-width: 960px) {
-  .page-id-158 .contactConfirmInner {
+  .page-id-27 .formConfirmPageInner {
     padding-top: 48px;
   }
-  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow {
+  .page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 16px;
     padding-bottom: 16px;
   }
-  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
+  .page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow .contactConfirmRowTitle {
     width: 100%;
     font-size: 16px;
     font-weight: 600;
   }
-  .page-id-158 .contactConfirmInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
+  .page-id-27 .formConfirmPageInner .wpcf7-form .contactConfirmRow .contactConfirmRowValue {
     width: 100%;
     font-size: 14px;
     font-weight: 400;
   }
-  .page-id-158 .contactConfirmInner .wpcf7-form .submitWrapper {
+  .page-id-27 .formConfirmPageInner .wpcf7-form .submitWrapper {
     margin-top: 32px;
   }
 }
@@ -1774,12 +1898,63 @@ Version: 1.0
 
 .required::after {
   content: "*";
-  margin-left: 10px;
+  margin-left: 4px;
   font-size: 16px;
   color: #ac0018;
 }
 @media screen and (max-width: 960px) {
   .required::after {
     margin-left: 4px;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-29 .thanksInner {
+  padding-top: 80px;
+  text-align: center;
+}
+.page-id-29 .thanksInner .thanksTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+.page-id-29 .thanksInner .thanksCopy {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.page-id-29 .thanksInner .thanksNote {
+  margin-top: 32px;
+  font-size: 14px;
+  color: #ac0018;
+}
+.page-id-29 .thanksInner .button {
+  margin-inline: auto;
+  margin-top: 48px;
+}
+.page-id-29 .thanksInner .button .buttonCopy {
+  font-weight: 500;
+  font-size: 18px;
+}
+@media screen and (max-width: 960px) {
+  .page-id-29 .thanksInner {
+    padding-top: 32px;
+  }
+  .page-id-29 .thanksInner .thanksTitle {
+    font-size: 24px;
+  }
+  .page-id-29 .thanksInner .thanksCopy {
+    margin-top: 40px;
+    font-weight: 600;
+  }
+  .page-id-29 .thanksInner .thanksNote {
+    margin-top: 32px;
+  }
+  .page-id-29 .thanksInner .button {
+    margin-top: 32px;
   }
 }/*# sourceMappingURL=style.css.map */
