@@ -227,7 +227,7 @@
 
         .messageText {
           font-size: 14px;
-          font-weight: 800;
+          font-weight: 600;
           line-height: 2;
         }
 
@@ -290,40 +290,6 @@
 
     a {
       z-index: 1;
-    }
-  }
-
-  // お問い合わせ
-  #contact {
-    width: 100%;
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    background: $colorCsBackground;
-    line-height: 1;
-
-    img {
-      width: 64px;
-      height: 64px;
-      aspect-ratio: 1;
-    }
-
-    .contactCta {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .contactTel {
-      font-family: "Futura", sans-serif;
-      font-size: 32px;
-      font-weight: 500;
-    }
-
-    .contactBusinessHours {
-      font-size: 14px;
     }
   }
 }

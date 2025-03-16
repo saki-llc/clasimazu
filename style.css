@@ -396,7 +396,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.05em;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #1a2c44;
 }
 
@@ -531,6 +531,181 @@ a {
 
 .fontWeightBold {
   font-weight: 600;
+}
+
+/* ===============================================
+   *  デバイスサイズに応じた表示切り替え
+  =============================================== */
+@media screen and (max-width: 960px) {
+  .pcOnly {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spOnly {
+    display: none;
+  }
+}
+
+/* ===============================================
+       サブページヘッダー
+  =============================================== */
+.subPageHeader {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 442px;
+}
+.subPageHeader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.subPageHeader .subPageHeaderTitle {
+  z-index: 1;
+  position: absolute;
+  top: 58%;
+  left: calc((100% - 1040px) / 2);
+  transform: translateY(-50%);
+}
+.subPageHeader .subPageHeaderTitle .subPageHeaderTitleJapanese {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+.subPageHeader .subPageHeaderTitle .subPageHeaderTitleEnglish {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ac0018;
+}
+.subPageHeader .pageTopButton {
+  z-index: 1;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 128px;
+  height: 128px;
+  opacity: 0;
+  transition: opacity 0.3s linear, scale 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.subPageHeader .pageTopButton.scrolled {
+  opacity: 1;
+}
+.subPageHeader .pageTopButton:hover {
+  scale: 1.1;
+}
+.subPageHeader .pageTopButton img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 960px) {
+  .subPageHeader {
+    width: 100%;
+    height: 240px;
+  }
+  .subPageHeader .subPageHeaderTitle {
+    left: 50%;
+    transform: translate(-50%, -45%);
+    margin-inline: auto;
+    width: calc(100% - 40px);
+    max-width: 295px;
+  }
+  .subPageHeader .subPageHeaderTitle .subPageHeaderTitleEnglish {
+    font-size: 32px;
+    line-height: 1.3;
+    left: 0;
+  }
+  .subPageHeader .subPageHeaderTitle .subPageHeaderTitleJapanese {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .subPageHeader .pageTopButton {
+    height: 72px;
+    width: 72px;
+  }
+  .subPageHeader .pageTopButton.scrolled {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* ===============================================
+ *  下層ページのインナー
+ =============================================== */
+.inner1040 {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1040px;
+  width: calc(100% - 40px);
+}
+@media screen and (max-width: 960px) {
+  .inner1040 {
+    margin-inline: auto;
+    width: calc(100% - 40px);
+  }
+}
+
+/* ===============================================
+ *  CTAコンポーネント
+ =============================================== */
+.ctaComponent {
+  padding-block: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.ctaComponent a {
+  margin: 0 !important;
+}
+@media screen and (max-width: 960px) {
+  .ctaComponent {
+    padding-block: 40px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* ===============================================
+ *  お問い合わせコンポーネント
+ =============================================== */
+#contact {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #f8f6f1;
+  line-height: 1;
+}
+#contact img {
+  width: 64px;
+  height: 64px;
+  aspect-ratio: 1;
+}
+#contact .contactCta {
+  font-size: 16px;
+  font-weight: 700;
+}
+#contact .contactTel {
+  font-family: "Futura", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+#contact .contactBusinessHours {
+  font-size: 14px;
 }
 
 /*
@@ -826,7 +1001,7 @@ Version: 1.0
 }
 .home #message .messageInner .messageLeft .messageText {
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 2;
 }
 .home #message .messageInner .messageLeft .messageName {
@@ -878,31 +1053,166 @@ Version: 1.0
 .home #ctaArea a {
   z-index: 1;
 }
-.home #contact {
-  width: 100%;
-  height: 230px;
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-7 .messageInner {
+  margin-top: 80px;
+}
+.page-id-7 .messageInner .messageContentsArea {
+  margin-top: 48px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 56px;
+}
+.page-id-7 .messageInner .messageContentsArea .messageLeft {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  gap: 32px;
+}
+.page-id-7 .messageInner .messageContentsArea .messageLeft .messageText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2;
+}
+.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName {
+  display: flex;
   align-items: center;
-  justify-content: center;
   gap: 16px;
-  background: #f8f6f1;
+  font-weight: 800;
   line-height: 1;
 }
-.home #contact img {
-  width: 64px;
-  height: 64px;
-  aspect-ratio: 1;
+.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName span:first-child {
+  font-size: 16px;
 }
-.home #contact .contactCta {
+.page-id-7 .messageInner .messageContentsArea .messageLeft .messageName span:last-child {
+  font-size: 24px;
+}
+.page-id-7 .messageInner .messageContentsArea .messageRight {
+  width: 100%;
+}
+.page-id-7 .messageInner .messageContentsArea .messageRight picture,
+.page-id-7 .messageInner .messageContentsArea .messageRight img,
+.page-id-7 .messageInner .messageContentsArea .messageRight source {
+  width: 100%;
+  height: auto;
+}
+.page-id-7 .messageInner .button {
+  margin-top: 40px;
+  margin-inline: auto;
+}
+@media screen and (max-width: 960px) {
+  .page-id-7 .messageInner {
+    margin-top: 32px;
+    flex-direction: column;
+  }
+  .page-id-7 .messageInner .messageContentsArea {
+    margin-top: 16px;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+  .page-id-7 .messageInner .messageContentsArea .messageLeft {
+    width: 100%;
+  }
+  .page-id-7 .messageInner .messageContentsArea .messageLeft .messageName {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .page-id-7 .messageInner .messageContentsArea .messageRight {
+    width: 100%;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-9 .successStoryInner {
+  margin-top: 80px;
+}
+.page-id-9 .successStoryInner .successStoryItem:not(:first-child) {
+  margin-top: 80px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ac0018;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemDescription {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome {
+  margin-top: 44px;
+  padding-top: 16px;
+  border-top: 1px solid #1a2c44;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeTitle {
+  font-size: 22px;
+  font-weight: 700;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+  margin-top: 32px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+  margin-top: 12px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+  min-width: 180px;
+  font-size: 16px;
+}
+.page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeValue {
   font-size: 16px;
   font-weight: 700;
 }
-.home #contact .contactTel {
-  font-family: "Futura", sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-}
-.home #contact .contactBusinessHours {
-  font-size: 14px;
+@media screen and (max-width: 960px) {
+  .page-id-9 .successStoryInner {
+    margin-top: 32px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemTitle {
+    font-size: 18px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome {
+    margin-top: 24px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+    margin-top: 16px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+    margin-top: 24px;
+  }
+  .page-id-9 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+    min-width: none;
+    width: 100%;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

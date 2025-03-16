@@ -37,9 +37,10 @@
                 <ul>
                     <li><a href="#">clasimazu</a></li>
                     <li><a href="#">Service</a></li>
-                    <li><a href="#">Message</a></li>
+                    <li><a href="<?php echo home_url(); ?>/message">Message</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="#">Voice</a></li>
+                    <li><a href="<?php echo home_url(); ?>/success-story">Success story</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>

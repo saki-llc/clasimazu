@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.05em;
-  line-height: 1.5;
+  line-height: 1.6;
   color: $colorClasimazuGray3;
 }
 
@@ -159,4 +159,192 @@ a {
 }
 .fontWeightBold {
   font-weight: 600;
+}
+
+/* ===============================================
+   *  デバイスサイズに応じた表示切り替え
+  =============================================== */
+.pcOnly {
+  @media screen and (max-width: $tabletBreakPoint) {
+    display: none;
+  }
+}
+
+.spOnly {
+  @media screen and (min-width: $tabletBreakPoint) {
+    display: none;
+  }
+}
+
+/* ===============================================
+       サブページヘッダー
+  =============================================== */
+.subPageHeader {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 442px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .subPageHeaderTitle {
+    z-index: 1;
+    position: absolute;
+    top: 58%;
+    left: calc((100% - 1040px) / 2);
+    transform: translateY(-50%);
+
+    .subPageHeaderTitleJapanese {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .subPageHeaderTitleEnglish {
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      color: $colorClasimazuRed;
+    }
+  }
+
+  .pageTopButton {
+    z-index: 1;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+    transition: opacity 0.3s linear, scale 0.5s $easeInOutQuint;
+
+    &.scrolled {
+      opacity: 1;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    width: 100%;
+    height: 240px;
+
+    .subPageHeaderTitle {
+      left: 50%;
+      transform: translate(-50%, -45%);
+      margin-inline: auto;
+      width: calc(100% - 40px);
+      max-width: 295px;
+
+      .subPageHeaderTitleEnglish {
+        font-size: 32px;
+        line-height: 1.3;
+        left: 0;
+      }
+
+      .subPageHeaderTitleJapanese {
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    .pageTopButton {
+      height: 72px;
+      width: 72px;
+
+      &.scrolled {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  }
+}
+
+/* ===============================================
+ *  下層ページのインナー
+ =============================================== */
+.inner1040 {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1040px;
+  width: calc(100% - 40px);
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    margin-inline: auto;
+    width: calc(100% - 40px);
+  }
+}
+
+/* ===============================================
+ *  CTAコンポーネント
+ =============================================== */
+.ctaComponent {
+  padding-block: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  a {
+    margin: 0 !important;
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    padding-block: 40px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* ===============================================
+ *  お問い合わせコンポーネント
+ =============================================== */
+// お問い合わせ
+#contact {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: $colorCsBackground;
+  line-height: 1;
+
+  img {
+    width: 64px;
+    height: 64px;
+    aspect-ratio: 1;
+  }
+
+  .contactCta {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .contactTel {
+    font-family: "Futura", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .contactBusinessHours {
+    font-size: 14px;
+  }
 }

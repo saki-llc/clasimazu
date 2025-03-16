@@ -1,0 +1,106 @@
+@use "../reset";
+@use "../var" as *;
+
+.page-id-9 {
+  .successStoryInner {
+    margin-top: 80px;
+
+    .successStoryItem {
+      &:not(:first-child) {
+        margin-top: 80px;
+      }
+
+      .successStoryItemTitle {
+        font-size: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: $colorClasimazuRed;
+        }
+      }
+
+      .successStoryItemDescription {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .successStoryItemOutcome {
+        margin-top: 44px;
+        padding-top: 16px;
+        border-top: 1px solid $colorClasimazuGray3;
+
+        .successStoryItemOutcomeTitle {
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .successStoryItemOutcomeContents {
+          margin-top: 32px;
+
+          .successStoryItemOutcomeRow {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &:not(:first-child) {
+              margin-top: 12px;
+            }
+
+            .successStoryItemOutcomeLabel {
+              min-width: 180px;
+              font-size: 16px;
+            }
+
+            .successStoryItemOutcomeValue {
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    .successStoryInner {
+      margin-top: 32px;
+      .successStoryItem {
+        .successStoryItemTitle {
+          font-size: 18px;
+        }
+
+        .successStoryItemOutcome {
+          margin-top: 24px;
+
+          .successStoryItemOutcomeContents {
+            margin-top: 16px;
+
+            .successStoryItemOutcomeRow {
+              flex-direction: column;
+              align-items: start;
+              gap: 4px;
+
+              &:not(:first-child) {
+                margin-top: 24px;
+              }
+
+              .successStoryItemOutcomeLabel {
+                min-width: none;
+                width: 100%;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

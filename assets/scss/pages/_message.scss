@@ -1,0 +1,88 @@
+@use "../reset";
+@use "../var" as *;
+
+.page-id-7 {
+  .messageInner {
+    margin-top: 80px;
+
+    .messageContentsArea {
+      margin-top: 48px;
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 56px;
+
+      .messageLeft {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .messageText {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 2;
+        }
+
+        .messageName {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-weight: 800;
+          line-height: 1;
+
+          span:first-child {
+            font-size: 16px;
+          }
+
+          span:last-child {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .messageRight {
+        width: 100%;
+
+        picture,
+        img,
+        source {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 40px;
+      margin-inline: auto;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    .messageInner {
+      margin-top: 32px;
+      flex-direction: column;
+
+      .messageContentsArea {
+        margin-top: 16px;
+        flex-direction: column-reverse;
+        gap: 24px;
+
+        .messageLeft {
+          width: 100%;
+
+          .messageName {
+            flex-direction: column;
+            align-items: flex-end;
+          }
+        }
+
+        .messageRight {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

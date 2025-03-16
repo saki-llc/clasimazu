@@ -49,3 +49,53 @@ function generateSectionTitle($english, $japanese, $color = null) { ?>
     <h2 class="sectionTitleJapanese"><?php echo $japanese; ?></h2>
   </hgroup>
 <?php }
+
+/* ===============================================
+ *  サブページヘッダーを生成する関数
+ =============================================== */
+function generateSubPageHeader($title, $english) { ?>
+  <section class="subPageHeader">
+    <picture>
+      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/subpage_header_sp.svg" media="max-width: 960px">
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/subpage_header_pc.svg"
+        width="1440"
+        height="442" />
+    </picture>
+    <hgroup class="subPageHeaderTitle">
+      <h1 class="subPageHeaderTitleJapanese"><?php echo $title; ?></h1>
+      <p class="subPageHeaderTitleEnglish"><?php echo $english; ?></p>
+    </hgroup>
+    <button class="pageTopButton">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/page-top_button.svg" alt="ページトップに戻る">
+    </button>
+  </section>
+<?php }
+
+/* ===============================================
+ *  CTAコンポーネントを生成する関数
+ =============================================== */
+function generateCTAComponent() { ?>
+  <section class="ctaComponent">
+    <?php generateButtonMain('お問い合わせはこちら', '/contact', 'button328'); ?>
+    <?php generateButtonMain('カタログダウンロード', '#', 'button328'); ?>
+  </section>
+<?php }
+
+/* ===============================================
+ *  お問い合わせコンポーネントを生成する関数
+ =============================================== */
+function generateContactComponent() { ?>
+  <section id="contact">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/front/contact_icon.svg" alt="携帯電話のアイコン">
+    <p class="contactCta">
+      お気軽にお問い合わせください
+    </p>
+    <a class="contactTel" href="tel:0120-475-008">
+      0120-475-008
+    </a>
+    <p class="contactBusinessHours">
+      電話受付時間：9：00〜17：00（定休日・水曜日）
+    </p>
+  </section>
+<?php }
