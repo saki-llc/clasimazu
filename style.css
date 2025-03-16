@@ -1150,10 +1150,10 @@ Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
 */
-.page-id-21 .messageInner {
+.page-id-33 .messageInner {
   margin-top: 80px;
 }
-.page-id-21 .messageInner .messageContentsArea {
+.page-id-33 .messageInner .messageContentsArea {
   margin-top: 48px;
   margin-left: auto;
   display: flex;
@@ -1161,61 +1161,61 @@ Version: 1.0
   align-items: start;
   gap: 56px;
 }
-.page-id-21 .messageInner .messageContentsArea .messageLeft {
+.page-id-33 .messageInner .messageContentsArea .messageLeft {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.page-id-21 .messageInner .messageContentsArea .messageLeft .messageText {
+.page-id-33 .messageInner .messageContentsArea .messageLeft .messageText {
   font-size: 14px;
   font-weight: 600;
   line-height: 2;
 }
-.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName {
+.page-id-33 .messageInner .messageContentsArea .messageLeft .messageName {
   display: flex;
   align-items: center;
   gap: 16px;
   font-weight: 800;
   line-height: 1;
 }
-.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName span:first-child {
+.page-id-33 .messageInner .messageContentsArea .messageLeft .messageName span:first-child {
   font-size: 16px;
 }
-.page-id-21 .messageInner .messageContentsArea .messageLeft .messageName span:last-child {
+.page-id-33 .messageInner .messageContentsArea .messageLeft .messageName span:last-child {
   font-size: 24px;
 }
-.page-id-21 .messageInner .messageContentsArea .messageRight {
+.page-id-33 .messageInner .messageContentsArea .messageRight {
   flex-shrink: 0;
   width: 552px;
 }
-.page-id-21 .messageInner .messageContentsArea .messageRight picture,
-.page-id-21 .messageInner .messageContentsArea .messageRight img,
-.page-id-21 .messageInner .messageContentsArea .messageRight source {
+.page-id-33 .messageInner .messageContentsArea .messageRight picture,
+.page-id-33 .messageInner .messageContentsArea .messageRight img,
+.page-id-33 .messageInner .messageContentsArea .messageRight source {
   width: 100%;
   height: auto;
 }
-.page-id-21 .messageInner .button {
+.page-id-33 .messageInner .button {
   margin-top: 40px;
   margin-inline: auto;
 }
 @media screen and (max-width: 960px) {
-  .page-id-21 .messageInner {
+  .page-id-33 .messageInner {
     margin-top: 32px;
     flex-direction: column;
   }
-  .page-id-21 .messageInner .messageContentsArea {
+  .page-id-33 .messageInner .messageContentsArea {
     margin-top: 16px;
     flex-direction: column-reverse;
     gap: 24px;
   }
-  .page-id-21 .messageInner .messageContentsArea .messageLeft {
+  .page-id-33 .messageInner .messageContentsArea .messageLeft {
     width: 100%;
   }
-  .page-id-21 .messageInner .messageContentsArea .messageLeft .messageName {
+  .page-id-33 .messageInner .messageContentsArea .messageLeft .messageName {
     flex-direction: column;
     align-items: flex-end;
   }
-  .page-id-21 .messageInner .messageContentsArea .messageRight {
+  .page-id-33 .messageInner .messageContentsArea .messageRight {
     width: 100%;
   }
 }
@@ -1226,81 +1226,81 @@ Author: Fujisaki Wahei
 Description: くらしまずの2025リニューアル
 Version: 1.0
 */
-.page-id-24 .successStoryInner {
+.page-id-31 .successStoryInner {
   margin-top: 80px;
 }
-.page-id-24 .successStoryInner .successStoryItem:not(:first-child) {
+.page-id-31 .successStoryInner .successStoryItem:not(:first-child) {
   margin-top: 80px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemTitle {
   font-size: 22px;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle::before {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemTitle::before {
   content: "";
   display: block;
   width: 24px;
   height: 2px;
   background: #ac0018;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemDescription {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemDescription {
   margin-top: 24px;
   font-size: 16px;
   line-height: 1.8;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome {
   margin-top: 44px;
   padding-top: 16px;
   border-top: 1px solid #1a2c44;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeTitle {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeTitle {
   font-size: 22px;
   font-weight: 700;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
   margin-top: 32px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
   margin-top: 12px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
   min-width: 180px;
   font-size: 16px;
 }
-.page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeValue {
+.page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeValue {
   font-size: 16px;
   font-weight: 700;
 }
 @media screen and (max-width: 960px) {
-  .page-id-24 .successStoryInner {
+  .page-id-31 .successStoryInner {
     margin-top: 32px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemTitle {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemTitle {
     font-size: 18px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome {
     margin-top: 24px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents {
     margin-top: 16px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow {
     flex-direction: column;
     align-items: start;
     gap: 4px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow:not(:first-child) {
     margin-top: 24px;
   }
-  .page-id-24 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
+  .page-id-31 .successStoryInner .successStoryItem .successStoryItemOutcome .successStoryItemOutcomeContents .successStoryItemOutcomeRow .successStoryItemOutcomeLabel {
     min-width: none;
     width: 100%;
     font-size: 14px;

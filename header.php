@@ -41,7 +41,7 @@
                     <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
                 </ul>
             </nav>
-            <?php generateButtonMain('お問い合わせ', '#', 'button200'); ?>
+            <?php generateButtonMain('お問い合わせ', '/contact', 'button200'); ?>
         </div>
     </header>
 
