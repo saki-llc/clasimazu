@@ -24,7 +24,7 @@
                 $excerpt = get_the_excerpt();
                 $excerpt80 = mb_substr($excerpt, 0, 80); // 80文字までに制限
                 ?>
-                <a class="archiveNewsItem" href="<?php the_permalink(); ?>">
+                <a class="archiveNewsItem animate" href="<?php the_permalink(); ?>">
                     <p class="archiveNewsItemThumbnail">
                         <img
                             src="<?php echo $thumbnail; ?>"

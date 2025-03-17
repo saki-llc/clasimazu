@@ -5,7 +5,7 @@
     <?php generateSectionTitle('', '愛情・誠実・信頼'); ?>
     <div class="messageContentsArea">
         <div class="messageLeft">
-            <p class="messageText">
+            <p class="messageText animate">
                 1965年の創業からこれまでお客様・お取引先様をはじめとする
                 多くの方々のご支援をいただき、地域に密着した商いをさせていただきました。
                 <br />
@@ -35,12 +35,12 @@
                 地域に還元できる会社になることを、スタッフ一同夢見て頑張ります。
                 <br />
             </p>
-            <p class="messageName">
+            <p class="messageName animate">
                 <span>株式会社 島津組 代表取締役社長</span>
                 <span>島津 志朗</span>
             </p>
         </div>
-        <picture class="messageRight">
+        <picture class="messageRight animate">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/subpages/message/ceo_photo_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/subpages/message/ceo_photo_sp@2x.webp 2x" media="max-width: 960px">
             <img
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/subpages/message/ceo_photo_pc.webp"

@@ -1,7 +1,7 @@
 </main>
 
 <footer>
-    <div class="footerInner">
+    <div class="footerInner animate">
         <div class="footerLinkArea">
             <a href="<?php echo home_url(); ?>/sitemap" class="footerLink">サイトマップ</a>
             <a href="<?php echo home_url(); ?>/privacy" class="footerLink">プライバシーポリシー</a>

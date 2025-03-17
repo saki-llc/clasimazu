@@ -742,3 +742,27 @@ a {
     }
   }
 }
+
+/* ===============================================
+ *  ふわっと出てくるアニメーション
+ =============================================== */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.isFadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

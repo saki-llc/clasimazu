@@ -42,7 +42,10 @@
                     <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
                 </ul>
             </nav>
-            <?php generateButtonMain('お問い合わせ', '/contact', 'button200'); ?>
+            <a href="/contact" class="button button208">
+                <span>お問い合わせ</span>
+                <span>→</span>
+            </a>
         </div>
         <button class="headerHamburgerButton spOnly">
             <span class="headerHamburgerButtonLine"></span>

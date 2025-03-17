@@ -4,9 +4,9 @@
 <section id="aboutUs">
     <div class="aboutUsInner inner1040">
         <div class="aboutUsCopyArea">
-            <p class="aboutUsCopyEnglish">Concept</p>
-            <p class="aboutUsCopyJapanese">clas<span class="textRed">i</span>mazuについて</p>
-            <p class="aboutUsCopyParagraph">
+            <p class="aboutUsCopyEnglish animate">Concept</p>
+            <p class="aboutUsCopyJapanese animate">clas<span class="textRed">i</span>mazuについて</p>
+            <p class="aboutUsCopyParagraph animate">
                 不動産、資金計画、ファンド運用など、暮らしに関わるすべてを専門家が総合的にサポート。
                 <br>
                 住まいの購入から資産形成、将来設計まで、一人ひとりの人生設計に寄り添い、最適な選択を提案します。

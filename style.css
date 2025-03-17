@@ -1047,6 +1047,29 @@ a {
   }
 }
 
+/* ===============================================
+ *  ふわっと出てくるアニメーション
+ =============================================== */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.isFadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*
 Theme Name: くらしまず 2025
 Author: Fujisaki Wahei
@@ -1089,6 +1112,9 @@ header .headerRight .headerNavPc ul li a {
   font-size: 14px;
   font-weight: 600;
   color: #1a2c44;
+}
+header .headerRight .button span:first-child {
+  font-size: 14px !important;
 }
 header .spGlobalNav {
   z-index: 100;
@@ -2428,7 +2454,6 @@ Version: 1.0
 .page-id-48 .aboutUsInner {
   margin-top: 80px;
   padding-bottom: 0 !important;
-  margin-bottom: -80px !important;
 }
 .page-id-48 .aboutUsInner .aboutUsCopyArea {
   margin-bottom: 24px;

@@ -59,7 +59,7 @@
                 $link = get_the_permalink();
                 ?>
                 <a class="mvNews" href="<?php echo $link; ?>">
-                    <div class="mvNewsInner">
+                    <div class="mvNewsInner animate">
                         <h2 class="mvNewsSectionTitle">
                             News
                         </h2>
@@ -80,14 +80,14 @@
             <p>投稿が見つかりませんでした。</p>
         <?php endif; ?>
         <div class="mvCopyArea">
-            <h2 class="mvCopy">
+            <h2 class="mvCopy animate">
                 <img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/front/mvCopy.svg"
                     width="549"
                     height="104"
                     alt="くらしのまん中に、アイがある。" />
             </h2>
-            <p class="mvCopyText">
+            <p class="mvCopyText animate">
                 プレミアムカーやI0T
                 <br />
                 （あらゆるモノをインターネットやネットワークに接続する技術）を
@@ -110,14 +110,14 @@
                 <br />
                 くらしのまん中に<span class="textRed">i(愛)</span>がある
             </p>
-            <p class="mvCopyLogo pcOnly">
+            <p class="mvCopyLogo pcOnly animate">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">
                 </a>
             </p>
         </div>
         <div class="mvBottomCopyArea spOnly">
-            <p class="mvBottomCopy">
+            <p class="mvBottomCopy animate">
                 プレミアムカーやI0T
                 <br />
                 （あらゆるモノをインターネットやネットワークに接続する技術）を
@@ -140,13 +140,13 @@
                 <br />
                 くらしのまん中に<span class="textRed">i(愛)</span>がある
             </p>
-            <p class="mvBottomLogo spOnly">
+            <p class="mvBottomLogo spOnly animate">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">
                 </a>
             </p>
         </div>
-        <div class="mvBottomImages">
+        <div class="mvBottomImages animate">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp@2x.webp 2x" media="max-width: <?php echo $spBreakPoint; ?>px">
                 <img
@@ -166,8 +166,8 @@
     <div class="aboutUsInner">
         <!-- セクションタイトルが特殊であるためこちらだけ静的に記載 -->
         <hgroup class="sectionTitleWrapper">
-            <p class="sectionTitleEnglish">Concept</p>
-            <h2 class="sectionTitleJapanese">clas<span class="textRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
+            <p class="sectionTitleEnglish animate">Concept</p>
+            <h2 class="sectionTitleJapanese animate">clas<span class="textRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
         </hgroup>
         <?php generateAboutUsLinksComponent(); ?>
         <img class="decoShape aboutUsShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape3.svg"></img>
@@ -177,9 +177,9 @@
 
 <section id="message">
     <div class="messageInner">
-        <div class="messageLeft">
+        <div class="messageLeft animate">
             <?php generateSectionTitle('Message', '愛情・誠実・信頼'); ?>
-            <p class="messagePicture spOnly">
+            <p class="messagePicture spOnly animate">
                 <img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp"
                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc@2x.webp 2x"
@@ -187,7 +187,7 @@
                     height="278"
                     alt="代表取締役社長 島津 志朗" />
             </p>
-            <p class="messageText">
+            <p class="messageText animate">
                 1965年の創業からこれまでお客様・お取引先様をはじめとする
                 <br>
                 多くの方々のご支援をいただき、地域に密着した商いをさせていただきました。
@@ -218,12 +218,12 @@
                 地域に還元できる会社になることを、スタッフ一同夢見て頑張ります。
                 <br />
             </p>
-            <p class="messageName">
+            <p class="messageName animate">
                 <span>株式会社 島津組 代表取締役社長</span>
                 <span>島津 志朗</span>
             </p>
         </div>
-        <picture class="messageRight pcOnly">
+        <picture class="messageRight pcOnly animate">
             <img
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp"
                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc@2x.webp 2x"

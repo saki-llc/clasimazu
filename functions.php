@@ -35,7 +35,7 @@ add_theme_support('post-thumbnails');
  =============================================== */
 function generateButtonMain($text, $link, $size = null, $color = null)
 { ?>
-  <a href="<?php echo $link; ?>" class="button <?php echo $size; ?> <?php echo $color; ?>">
+  <a href="<?php echo $link; ?>" class="button <?php echo $size; ?> <?php echo $color; ?> animate">
     <span><?php echo $text; ?></span>
     <span>→</span>
   </a>
@@ -47,8 +47,8 @@ function generateButtonMain($text, $link, $size = null, $color = null)
 function generateSectionTitle($english, $japanese, $color = null)
 { ?>
   <hgroup class="sectionTitleWrapper <?php echo $color; ?>">
-    <p class="sectionTitleEnglish"><?php echo $english; ?></p>
-    <h2 class="sectionTitleJapanese"><?php echo $japanese; ?></h2>
+    <p class="sectionTitleEnglish animate"><?php echo $english; ?></p>
+    <h2 class="sectionTitleJapanese animate"><?php echo $japanese; ?></h2>
   </hgroup>
 <?php }
 
@@ -77,7 +77,7 @@ function generateSubPageHeader($title, $english)
  =============================================== */
 function generateCTAComponent()
 { ?>
-  <section class="ctaComponent">
+  <section class="ctaComponent animate">
     <?php generateButtonMain('お問い合わせはこちら', '/contact', 'button328'); ?>
     <?php generateButtonMain('カタログダウンロード', '#', 'button328'); ?>
   </section>
@@ -89,14 +89,14 @@ function generateCTAComponent()
 function generateContactComponent()
 { ?>
   <section id="contact">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/front/contact_icon.svg" alt="携帯電話のアイコン">
-    <p class="contactCta">
+    <img class="animate" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/contact_icon.svg" alt="携帯電話のアイコン">
+    <p class="contactCta animate">
       お気軽にお問い合わせください
     </p>
-    <a class="contactTel" href="tel:0120-475-008">
+    <a class="contactTel animate" href="tel:0120-475-008">
       0120-475-008
     </a>
-    <p class="contactBusinessHours">
+    <p class="contactBusinessHours animate">
       電話受付時間：9：00〜17：00（定休日・水曜日）
     </p>
   </section>
@@ -108,13 +108,14 @@ function generateContactComponent()
 function generateAboutUsLinksComponent()
 { ?>
   <div class="aboutUsLinks pcOnly">
-    <div class="aboutUsLinksInner">
+    <div class="aboutUsLinksInner animate">
       <img
         src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_pc.webp"
         srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_pc@2x.webp 2x"
         width="1040"
         height="974"
-        alt="くらしまずの事業説明グラフィック" />
+        alt="くらしまずの事業説明グラフィック"
+        class="animate" />
       <a class="aboutUsLinkItem aboutUsLinkItem1" href="https://www.google.com" target="_blank">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
@@ -168,15 +169,15 @@ function generateAboutUsLinksComponent()
     </div>
   </div>
   <div class="aboutUsLinksSpOnly spOnly">
-    <p class="aboutUsLinksLogo">
+    <p class="aboutUsLinksLogo animate">
       <img
         src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/logo_box.svg"
         width="201"
         height="124"
         alt="くらしまずのロゴ" />
     </p>
-    <div class="aboutUsLinksList">
-      <div class="aboutUsLinksItem">
+    <div class="aboutUsLinksList animate">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
@@ -202,7 +203,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon2.webp"
@@ -227,7 +228,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon3.webp"
@@ -256,7 +257,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon4.webp"
@@ -281,7 +282,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon5.webp"
@@ -307,7 +308,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon6.webp"
@@ -332,7 +333,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem">
+      <div class="aboutUsLinksItem animate">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon7.webp"

@@ -43,6 +43,12 @@ header {
         }
       }
     }
+
+    .button {
+      span:first-child {
+        font-size: 14px !important;
+      }
+    }
   }
 
   .spGlobalNav {
