@@ -1,0 +1,43 @@
+@use "../reset";
+@use "../var" as *;
+
+.page-id-51 {
+  .privacyInner {
+    padding-top: 80px;
+
+    h2 {
+      margin-top: 52px;
+      display: flex;
+      align-items: start;
+      gap: 16px;
+      font-size: 28px;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 24px;
+        background-color: $colorClasimazuRed;
+        transform: translateY(6px);
+      }
+    }
+
+    p:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    @media screen and (max-width: $tabletBreakPoint) {
+      padding-top: 32px;
+
+      h2 {
+        font-size: 20px;
+        gap: 8px;
+      }
+
+      p:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+  }
+}

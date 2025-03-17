@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php generateSubPageHeader('成功事例', 'Success story'); ?>
+<?php generateSubPageHeader('成功事例', 'Case'); ?>
 
 <div class="successStoryInner inner1040">
     <div class="successStoryItem">

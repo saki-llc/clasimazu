@@ -392,6 +392,7 @@ Version: 1.0
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -428,10 +429,17 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
-
-.sectionTitleJapanese {
+.sectionTitleWrapper .sectionTitleJapanese {
   font-size: 32px;
   font-weight: 600;
+}
+@media screen and (max-width: 960px) {
+  .sectionTitleWrapper {
+    gap: 2px;
+  }
+  .sectionTitleWrapper .sectionTitleJapanese {
+    font-size: 24px;
+  }
 }
 
 /* ===============================================
@@ -518,7 +526,7 @@ a {
 /* ===============================================
    *  色変更
    =============================================== */
-.TextRed {
+.textRed {
   color: #ac0018;
 }
 
@@ -745,6 +753,10 @@ a {
   background: #1a2c44;
   color: #fff;
 }
+.arrow32.red {
+  background: #ac0018;
+  color: #fff;
+}
 
 /* ===============================================
  *  ページネーション
@@ -792,6 +804,249 @@ a {
   }
 }
 
+/* ===============================================
+ *  デコレーションシェイプのクリックイベントを無効化
+ =============================================== */
+.decoShape {
+  pointer-events: none;
+}
+
+/* ===============================================
+ *  about-usのlinksをコンポーネント
+ =============================================== */
+#aboutUs {
+  position: relative;
+  width: 100%;
+}
+#aboutUs .aboutUsInner {
+  max-width: 1040px;
+  margin-inline: auto;
+  padding-block: 80px;
+}
+#aboutUs .aboutUsInner .sectionTitleWrapper .sectionTitleJapanese span:last-child {
+  font-weight: 700;
+}
+#aboutUs .aboutUsInner .aboutUsLinks {
+  position: relative;
+  width: 100%;
+  max-width: calc(100% - 40px);
+  margin-inline: auto;
+}
+#aboutUs .aboutUsInner .aboutUsLinks img:first-child {
+  width: 100%;
+  height: auto;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  max-width: 120px;
+  max-height: 120px;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(2) {
+  top: 26%;
+  left: 50%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(3) {
+  top: 32%;
+  left: 67%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(4) {
+  top: 49%;
+  left: 75%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(5) {
+  top: 66%;
+  left: 68%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(6) {
+  top: 66%;
+  left: 32%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(7) {
+  top: 49%;
+  left: 25%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(8) {
+  top: 32%;
+  left: 33%;
+}
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:hover {
+  opacity: 0.8;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+#aboutUs .aboutUsInner .button {
+  margin-top: 40px;
+  margin-inline: auto;
+}
+#aboutUs .aboutUsShape1 {
+  width: 538px;
+  height: 443px;
+  position: absolute;
+  top: 120px;
+  left: 0;
+}
+#aboutUs .aboutUsShape1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutUs .aboutUsShape2 {
+  width: 538px;
+  height: 534px;
+  position: absolute;
+  bottom: -120px;
+  right: 0;
+}
+#aboutUs .aboutUsShape2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+  #aboutUs .aboutUsInner {
+    padding-block: 40px;
+    padding-inline: 20px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksLogo {
+    margin-top: 56px;
+    width: 201px;
+    height: 124px;
+    margin-inline: auto;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksLogo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList {
+    position: relative;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemIcon {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemIcon img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight {
+    flex: 1;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemTitle {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #049fbd;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemTitle .aboutUsLinksItemTitleIcon {
+    height: 26px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemTitle .aboutUsLinksItemTitleText {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemList li {
+    line-height: 1.6;
+    font-size: 14px;
+    display: flex;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemRight .aboutUsLinksItemList li::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #049fbd;
+    margin-right: 8px;
+    transform: translateY(6px);
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(2) li::before {
+    background: #b02921 !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(2) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #b02921;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(3) li::before {
+    background: #e57e3a !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(3) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #e57e3a;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(4) li::before {
+    background: #7a5f51 !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(4) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #7a5f51;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(5) li::before {
+    background: #3a4da5 !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(5) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #3a4da5;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(6) li::before {
+    background: #84929c !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(6) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #84929c;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(7) li::before {
+    background: #3d8068 !important;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:nth-child(7) .aboutUsLinksItemTitle {
+    border-bottom: 1px solid #3d8068;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList::before {
+    z-index: -1;
+    position: absolute;
+    left: 60px;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 8px;
+    height: calc(100% - 40px);
+    background: #aaaaaa;
+  }
+}
+
 /*
 Theme Name: くらしまず 2025
 Author: Fujisaki Wahei
@@ -799,7 +1054,7 @@ Description: くらしまずの2025リニューアル
 Version: 1.0
 */
 header {
-  z-index: 100;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -811,6 +1066,7 @@ header {
   padding-inline: 48px;
 }
 header .headerLogo {
+  z-index: 100;
   height: 64px;
 }
 header .headerLogo img {
@@ -819,19 +1075,115 @@ header .headerLogo img {
      object-fit: cover;
 }
 header .headerRight {
+  z-index: 100;
   display: flex;
   align-items: center;
   gap: 40px;
 }
-header .headerRight .headerNav--pc ul {
+header .headerRight .headerNavPc ul {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-header .headerRight .headerNav--pc ul li a {
+header .headerRight .headerNavPc ul li a {
   font-size: 14px;
   font-weight: 600;
   color: #1a2c44;
+}
+header .spGlobalNav {
+  z-index: 100;
+  position: fixed;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  header {
+    height: 64px;
+    padding-inline: 24px;
+  }
+  header .headerLogo {
+    z-index: 101;
+    height: 32px;
+  }
+  header .headerRight {
+    display: none;
+  }
+  header .headerHamburgerButton {
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 42px;
+    height: 18px;
+    cursor: pointer;
+  }
+  header .headerHamburgerButton .headerHamburgerButtonLine {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1a2c44;
+    transition: all 0.4s linear;
+  }
+}
+header .spGlobalNav {
+  visibility: hidden;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+header .spGlobalNav ul {
+  margin-top: 24px;
+  width: 295px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .spGlobalNav ul li {
+  padding-block: 24px;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+header .spGlobalNav ul li:hover {
+  background-color: #f0f0f0;
+}
+header .spGlobalNav ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2c44;
+}
+header .spGlobalNav ul li:first-child {
+  border-top: 1px solid #f0f0f0;
+}
+header .spGlobalNav .button span:first-child {
+  font-size: 14px !important;
+}
+header.isOpen .headerHamburgerButton .headerHamburgerButtonLine:nth-child(1) {
+  transform: translateY(8px) rotate(30deg);
+}
+header.isOpen .headerHamburgerButton .headerHamburgerButtonLine:nth-child(2) {
+  opacity: 0;
+}
+header.isOpen .headerHamburgerButton .headerHamburgerButtonLine:nth-child(3) {
+  transform: translateY(-8px) rotate(-30deg);
+}
+header.isOpen .spGlobalNav {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*
@@ -849,6 +1201,21 @@ footer .footerInner {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+footer .footerInner .footerLinkArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+footer .footerInner .footerLinkArea .footerLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaaaaa;
+  transition: color 0.3s ease;
+}
+footer .footerInner .footerLinkArea .footerLink:hover {
+  color: #1a2c44;
 }
 footer .footerInner .footerCopy {
   font-size: 24px;
@@ -891,6 +1258,9 @@ Version: 1.0
 .home {
   overflow-x: hidden;
 }
+.home #mv {
+  overflow: hidden;
+}
 .home #mv .mvSwiper {
   width: 100%;
 }
@@ -910,7 +1280,7 @@ Version: 1.0
 .home #mv .mvBottom {
   position: relative;
   background: #f8f6f1;
-  height: 10000px;
+  height: 630px;
 }
 .home #mv .mvBottom .mvNews {
   z-index: 1;
@@ -1015,54 +1385,6 @@ Version: 1.0
   -o-object-fit: cover;
      object-fit: cover;
 }
-.home #aboutUs {
-  position: relative;
-  width: 100%;
-}
-.home #aboutUs .aboutUsInner {
-  max-width: 1040px;
-  margin-inline: auto;
-  padding-block: 80px;
-}
-.home #aboutUs .aboutUsInner .sectionTitleWrapper .sectionTitleJapanese span:last-child {
-  font-weight: 700;
-}
-.home #aboutUs .aboutUsInner .aboutUsImage {
-  width: 100%;
-}
-.home #aboutUs .aboutUsInner .aboutUsImage img {
-  width: 100%;
-}
-.home #aboutUs .aboutUsInner .button {
-  margin-top: 40px;
-  margin-inline: auto;
-}
-.home #aboutUs .aboutUsShape1 {
-  width: 538px;
-  height: 443px;
-  position: absolute;
-  top: 120px;
-  left: 0;
-}
-.home #aboutUs .aboutUsShape1 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home #aboutUs .aboutUsShape2 {
-  width: 538px;
-  height: 534px;
-  position: absolute;
-  bottom: -120px;
-  right: 0;
-}
-.home #aboutUs .aboutUsShape2 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .home #message {
   position: relative;
   width: 100%;
@@ -1078,7 +1400,6 @@ Version: 1.0
   gap: 64px;
 }
 .home #message .messageInner .messageLeft {
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -1102,7 +1423,8 @@ Version: 1.0
   font-size: 24px;
 }
 .home #message .messageInner .messageRight {
-  width: 100%;
+  flex-shrink: 0;
+  width: 648px;
 }
 .home #message .messageInner .messageRight picture,
 .home #message .messageInner .messageRight img {
@@ -1126,21 +1448,159 @@ Version: 1.0
   -o-object-fit: cover;
      object-fit: cover;
 }
-.home #ctaArea {
-  width: 100%;
-  height: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-}
-.home #ctaArea a {
-  z-index: 1;
+.home .ctaComponent {
+  position: relative;
+  z-index: 10;
 }
 @media screen and (max-width: 960px) {
   .home #contact {
     width: 100%;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .home #mv .mvBottom {
+    height: auto;
+  }
+  .home #mv .mvBottom .mvNews {
+    height: auto;
+    position: relative;
+    padding: 24px 0px;
+    justify-content: center;
+  }
+  .home #mv .mvBottom .mvNews .mvNewsInner {
+    gap: 4px;
+  }
+  .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .home #mv .mvBottom .mvCopyArea {
+    width: 100%;
+    top: -540px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .home #mv .mvBottom .mvCopyArea .mvCopy {
+    width: calc(100% - 40px);
+    margin-inline: auto;
+  }
+  .home #mv .mvBottom .mvCopyArea .mvCopy img {
+    width: 100%;
+    height: auto;
+  }
+  .home #mv .mvBottom .mvCopyArea .mvCopyText {
+    display: none;
+  }
+  .home #mv .mvBottom .mvCopyArea .mvCopyLogo {
+    display: none;
+  }
+  .home #mv .mvBottom .mvBottomCopyArea {
+    width: calc(100% - 40px);
+    margin-inline: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .home #mv .mvBottom .mvBottomCopyArea .mvBottomCopy {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+  }
+  .home #mv .mvBottom .mvBottomCopyArea .mvBottomLogo {
+    margin-top: 40px;
+    height: 52px;
+  }
+  .home #mv .mvBottom .mvBottomCopyArea .mvBottomLogo a,
+  .home #mv .mvBottom .mvBottomCopyArea .mvBottomLogo img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .home #mv .mvBottom .mvBottomImages {
+    z-index: 1;
+    margin-top: 120px;
+    position: relative;
+    width: calc(100% - 40px);
+    margin-inline: auto;
+    left: 0;
+    bottom: 40px;
+  }
+  .home #mv .mvBottom .mvBottomImages picture {
+    width: 100%;
+    height: auto;
+  }
+  .home #mv .mvBottom .mvBottomImages picture img {
+    width: 100%;
+    height: auto;
+  }
+  .home #mv .mvBottom .mvBottomShape1 {
+    width: 188px;
+    height: 132px;
+    top: 20px;
+    right: 20px;
+    left: auto;
+    bottom: auto;
+  }
+  .home #mv .mvBottom .mvBottomShape2 {
+    width: 259px;
+    height: 192px;
+    bottom: 60px;
+    right: 0px;
+    top: auto;
+    left: auto;
+  }
+  .home #message {
+    overflow: hidden;
+    padding-block: 40px;
+  }
+  .home #message .messageInner {
+    width: calc(100% - 40px);
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home #message .messageInner .messageLeft {
+    gap: 24px;
+  }
+  .home #message .messageInner .messageLeft .messagePicture {
+    width: 100%;
+    height: auto;
+  }
+  .home #message .messageInner .messageLeft .messageText {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .home #message .messageInner .messageLeft .messageName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .home #message .messageShape1 {
+    width: 264px;
+    height: 208px;
+    bottom: 20px;
+    right: -140px;
+    left: auto;
+    top: auto;
+  }
+  .home #aboutUs {
+    overflow: hidden;
+  }
+  .home #aboutUs .aboutUsShape1 {
+    width: 188px;
+    height: 132px;
+    top: 94px;
+    left: -39px;
+    right: auto;
+  }
+  .home #aboutUs .aboutUsShape2 {
+    width: 259px;
+    height: 192px;
+    bottom: auto;
+    top: 429px;
+    right: -24px;
   }
 }
 
@@ -1956,5 +2416,116 @@ Version: 1.0
   }
   .page-id-29 .thanksInner .button {
     margin-top: 32px;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-48 .aboutUsInner {
+  margin-top: 80px;
+  padding-bottom: 0 !important;
+  margin-bottom: -80px !important;
+}
+.page-id-48 .aboutUsInner .aboutUsCopyArea {
+  margin-bottom: 24px;
+}
+.page-id-48 .aboutUsInner .aboutUsCopyArea .aboutUsCopyEnglish {
+  font-weight: 600;
+  line-height: 2;
+}
+.page-id-48 .aboutUsInner .aboutUsCopyArea .aboutUsCopyJapanese {
+  margin-top: 16px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+}
+.page-id-48 .aboutUsInner .aboutUsCopyArea .aboutUsCopyParagraph {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 2;
+}
+.page-id-48 .aboutUsInner .button {
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 960px) {
+  .page-id-48 .aboutUsInner {
+    margin-top: 40px;
+    padding: 0 !important;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-51 .privacyInner {
+  padding-top: 80px;
+}
+.page-id-51 .privacyInner h2 {
+  margin-top: 52px;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.page-id-51 .privacyInner h2::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 24px;
+  background-color: #ac0018;
+  transform: translateY(6px);
+}
+.page-id-51 .privacyInner p:not(:first-child) {
+  margin-top: 16px;
+}
+@media screen and (max-width: 960px) {
+  .page-id-51 .privacyInner {
+    padding-top: 32px;
+  }
+  .page-id-51 .privacyInner h2 {
+    font-size: 20px;
+    gap: 8px;
+  }
+  .page-id-51 .privacyInner p:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+/*
+Theme Name: くらしまず 2025
+Author: Fujisaki Wahei
+Description: くらしまずの2025リニューアル
+Version: 1.0
+*/
+.page-id-53 .sitemapInner {
+  max-width: 700px;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.page-id-53 .sitemapInner .sitemapNavItem {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2c44;
+  transition: opacity 0.3s ease;
+}
+.page-id-53 .sitemapInner .sitemapNavItem:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 960px) {
+  .page-id-53 .sitemapInner {
+    padding-top: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

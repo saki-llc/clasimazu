@@ -2,7 +2,7 @@
 @use "./var" as *;
 
 header {
-  z-index: 100;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +14,7 @@ header {
   padding-inline: 48px;
 
   .headerLogo {
+    z-index: 100;
     height: 64px;
     img {
       height: 100%;
@@ -22,11 +23,12 @@ header {
   }
 
   .headerRight {
+    z-index: 100;
     display: flex;
     align-items: center;
     gap: 40px;
 
-    .headerNav--pc {
+    .headerNavPc {
       ul {
         display: flex;
         align-items: center;
@@ -40,6 +42,124 @@ header {
           }
         }
       }
+    }
+  }
+
+  .spGlobalNav {
+    z-index: 100;
+    position: fixed;
+    display: none;
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    height: 64px;
+    padding-inline: 24px;
+
+    .headerLogo {
+      z-index: 101;
+      height: 32px;
+    }
+
+    .headerRight {
+      display: none;
+    }
+
+    .headerHamburgerButton {
+      z-index: 101;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 42px;
+      height: 18px;
+      cursor: pointer;
+
+      .headerHamburgerButtonLine {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $colorClasimazuNavy;
+        transition: all 0.4s linear;
+      }
+    }
+  }
+
+  .spGlobalNav {
+    visibility: hidden;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background: $colorWhite;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    ul {
+      margin-top: 24px;
+      width: 295px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding-block: 24px;
+        border-bottom: 1px solid $colorClasimazuGray3;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $colorClasimazuGray3;
+        }
+
+        a {
+          font-size: 14px;
+          font-weight: 600;
+          color: $colorClasimazuNavy;
+        }
+
+        &:first-child {
+          border-top: 1px solid $colorClasimazuGray3;
+        }
+      }
+    }
+
+    .button {
+      span:first-child {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  &.isOpen {
+    .headerHamburgerButton {
+      .headerHamburgerButtonLine {
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(30deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-30deg);
+        }
+      }
+    }
+
+    .spGlobalNav {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

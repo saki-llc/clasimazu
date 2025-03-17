@@ -6,7 +6,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <picture>
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_sp@2x.webp 2x" media="max-width: <?php echo $tabletBreakPoint; ?>px">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_sp@2x.webp 2x" media="(max-width: 960px)">
                     <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_pc.webp"
                         srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv1_pc@2x.webp 2x"
@@ -17,7 +17,7 @@
             </div>
             <div class="swiper-slide">
                 <picture>
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_sp@2x.webp 2x" media="max-width: <?php echo $tabletBreakPoint; ?>px">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_sp@2x.webp 2x" media="(max-width: 960px)">
                     <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_pc.webp"
                         srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv2_pc@2x.webp 2x"
@@ -28,7 +28,7 @@
             </div>
             <div class="swiper-slide">
                 <picture>
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_sp@2x.webp 2x" media="max-width: <?php echo $tabletBreakPoint; ?>px">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_sp@2x.webp 2x" media="(max-width: 960px)">
                     <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_pc.webp"
                         srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv3_pc@2x.webp 2x"
@@ -40,21 +40,45 @@
         </div>
     </div>
     <div class="mvBottom">
-        <a class="mvNews">
-            <div class="mvNewsInner">
-                <h2 class="mvNewsSectionTitle">
-                    News
-                </h2>
-                <div class="mvNewsContent">
-                    <p class="mvNewsDate">
-                        2025.03.02
-                    </p>
-                    <p class="mvNewsTitle">
-                        お客様と共に住まいづくりの物語を語り合いたい。
-                    </p>
-                </div>
-            </div>
-        </a>
+        <?php
+        $args = array(
+            'post_type' => 'news',
+            'posts_per_page' => 1,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        );
+
+        $query = new WP_Query($args);
+        ?>
+
+        <?php if ($query->have_posts()) : ?>
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
+                <?php
+                $title = get_the_title();
+                $date = get_the_date();
+                $link = get_the_permalink();
+                ?>
+                <a class="mvNews" href="<?php echo $link; ?>">
+                    <div class="mvNewsInner">
+                        <h2 class="mvNewsSectionTitle">
+                            News
+                        </h2>
+                        <div class="mvNewsContent">
+                            <p class="mvNewsDate">
+                                <?php echo $date; ?>
+                            </p>
+                            <p class="mvNewsTitle">
+                                <?php echo $title; ?>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); // クエリをリセット
+            ?>
+        <?php else : ?>
+            <p>投稿が見つかりませんでした。</p>
+        <?php endif; ?>
         <div class="mvCopyArea">
             <h2 class="mvCopy">
                 <img
@@ -80,13 +104,43 @@
                 <br />
                 士業連携で『ワンストップ』で解決する。
                 <br /><br />
-                その入り口がclas<span class="TextRed">i</span>mazu（島津組サービスブランドの総称）です。
+                その入り口がclas<span class="textRed">i</span>mazu（島津組サービスブランドの総称）です。
                 <br />
-                のことならclas<span class="TextRed">i</span>mazu島津組へ
+                のことならclas<span class="textRed">i</span>mazu島津組へ
                 <br />
-                くらしのまん中に<span class="TextRed">i(愛)</span>がある
+                くらしのまん中に<span class="textRed">i(愛)</span>がある
             </p>
-            <p class="mvCopyLogo">
+            <p class="mvCopyLogo pcOnly">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">
+                </a>
+            </p>
+        </div>
+        <div class="mvBottomCopyArea spOnly">
+            <p class="mvBottomCopy">
+                プレミアムカーやI0T
+                <br />
+                （あらゆるモノをインターネットやネットワークに接続する技術）を
+                <br />
+                導入した先進的なモデルハウスを拠点に
+                <br />
+                建築に留まらず不動産活用、資産運用、カーファンド、
+                <br />
+                資金相談、信託など様々な情報を提供しながら
+                <br /><br>
+                お金のこと、法律のこと、家族のこと、相続のこと・・・
+                <br />
+                くらしにまつわるお困りごとを専門家ネットワークを活用した
+                <br />
+                士業連携で『ワンストップ』で解決する。
+                <br /><br />
+                その入り口がclas<span class="textRed">i</span>mazu（島津組サービスブランドの総称）です。
+                <br />
+                のことならclas<span class="textRed">i</span>mazu島津組へ
+                <br />
+                くらしのまん中に<span class="textRed">i(愛)</span>がある
+            </p>
+            <p class="mvBottomLogo spOnly">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">
                 </a>
@@ -113,30 +167,29 @@
         <!-- セクションタイトルが特殊であるためこちらだけ静的に記載 -->
         <hgroup class="sectionTitleWrapper">
             <p class="sectionTitleEnglish">Concept</p>
-            <h2 class="sectionTitleJapanese">clas<span class="TextRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
+            <h2 class="sectionTitleJapanese">clas<span class="textRed">i</span>mazu<span class="fontWeightBold">について</span></h2>
         </hgroup>
-        <div class="aboutUsLinks pcOnly">
-            <div class="aboutUsLinksInner">
-                <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc.webp"
-                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/about-clasimazu_pc@2x.webp 2x"
-                    width="1040"
-                    height="974"
-                    alt="clasimazuについて" />
-                <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
-            </div>
-        </div>
+        <?php generateAboutUsLinksComponent(); ?>
+        <img class="decoShape aboutUsShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape3.svg"></img>
+        <img class="decoShape aboutUsShape2" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape4.svg"></img>
     </div>
-    <img class="aboutUsShape1" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape3.svg"></img>
-    <img class="aboutUsShape2" src="<?php echo get_template_directory_uri(); ?>/assets/images/front/shape4.svg"></img>
 </section>
 
 <section id="message">
     <div class="messageInner">
         <div class="messageLeft">
             <?php generateSectionTitle('Message', '愛情・誠実・信頼'); ?>
+            <p class="messagePicture spOnly">
+                <img
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp"
+                    srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc@2x.webp 2x"
+                    width="335"
+                    height="278"
+                    alt="代表取締役社長 島津 志朗" />
+            </p>
             <p class="messageText">
                 1965年の創業からこれまでお客様・お取引先様をはじめとする
+                <br>
                 多くの方々のご支援をいただき、地域に密着した商いをさせていただきました。
                 <br />
                 だからこそ私たち島津組スタッフは、
@@ -170,8 +223,7 @@
                 <span>島津 志朗</span>
             </p>
         </div>
-        <picture class="messageRight">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_sp@2x.webp 2x" media="max-width: <?php echo $spBreakPoint; ?>px">
+        <picture class="messageRight pcOnly">
             <img
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp"
                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/ceo_photo_pc@2x.webp 2x"

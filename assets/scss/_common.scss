@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -44,11 +45,19 @@ a {
     font-size: 14px;
     font-weight: 600;
   }
-}
 
-.sectionTitleJapanese {
-  font-size: 32px;
-  font-weight: 600;
+  .sectionTitleJapanese {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    gap: 2px;
+
+    .sectionTitleJapanese {
+      font-size: 24px;
+    }
+  }
 }
 
 /* ===============================================
@@ -147,7 +156,7 @@ a {
 /* ===============================================
    *  色変更
    =============================================== */
-.TextRed {
+.textRed {
   color: $colorClasimazuRed;
 }
 
@@ -384,6 +393,11 @@ a {
   font-size: 12px;
   background: $colorClasimazuNavy;
   color: $colorWhite;
+
+  &.red {
+    background: $colorClasimazuRed;
+    color: $colorWhite;
+  }
 }
 
 /* ===============================================
@@ -434,6 +448,297 @@ a {
 
     .page-numbers {
       font-size: 16px;
+    }
+  }
+}
+
+/* ===============================================
+ *  デコレーションシェイプのクリックイベントを無効化
+ =============================================== */
+.decoShape {
+  pointer-events: none;
+}
+
+/* ===============================================
+ *  about-usのlinksをコンポーネント
+ =============================================== */
+#aboutUs {
+  position: relative;
+  width: 100%;
+
+  .aboutUsInner {
+    max-width: 1040px;
+    margin-inline: auto;
+    padding-block: 80px;
+
+    .sectionTitleWrapper {
+      .sectionTitleJapanese {
+        span:last-child {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .aboutUsLinks {
+      position: relative;
+      width: 100%;
+      max-width: calc(100% - 40px);
+      margin-inline: auto;
+
+      img:first-child {
+        width: 100%;
+        height: auto;
+      }
+
+      .aboutUsLinkItem {
+        position: absolute;
+        width: 10vw;
+        height: 10vw;
+        max-width: 120px;
+        max-height: 120px;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &:nth-child(2) {
+          top: 26%;
+          left: 50%;
+        }
+        &:nth-child(3) {
+          top: 32%;
+          left: 67%;
+        }
+        &:nth-child(4) {
+          top: 49%;
+          left: 75%;
+        }
+        &:nth-child(5) {
+          top: 66%;
+          left: 68%;
+        }
+        &:nth-child(6) {
+          top: 66%;
+          left: 32%;
+        }
+        &:nth-child(7) {
+          top: 49%;
+          left: 25%;
+        }
+        &:nth-child(8) {
+          top: 32%;
+          left: 33%;
+        }
+
+        &:hover {
+          opacity: 0.8;
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+    }
+
+    .button {
+      margin-top: 40px;
+      margin-inline: auto;
+    }
+  }
+
+  .aboutUsShape1 {
+    width: 538px;
+    height: 443px;
+    position: absolute;
+    top: 120px;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .aboutUsShape2 {
+    width: 538px;
+    height: 534px;
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    .aboutUsInner {
+      padding-block: 40px;
+      padding-inline: 20px;
+
+      .aboutUsLinksSpOnly {
+        .aboutUsLinksLogo {
+          margin-top: 56px;
+          width: 201px;
+          height: 124px;
+          margin-inline: auto;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .aboutUsLinksList {
+          position: relative;
+          margin-top: 56px;
+          display: flex;
+          flex-direction: column;
+          gap: 48px;
+
+          .aboutUsLinksItem {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+
+            .aboutUsLinksItemIcon {
+              flex-shrink: 0;
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+
+            .aboutUsLinksItemRight {
+              flex: 1;
+
+              .aboutUsLinksItemTitle {
+                margin-bottom: 16px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #049fbd;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .aboutUsLinksItemTitleIcon {
+                  height: 26px;
+                  width: fit-content;
+                }
+
+                .aboutUsLinksItemTitleText {
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+
+              .aboutUsLinksItemList {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                  line-height: 1.6;
+                  font-size: 14px;
+                  display: flex;
+
+                  &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: #049fbd;
+                    margin-right: 8px;
+                    transform: translateY(6px);
+                  }
+                }
+              }
+            }
+
+            // 各項目のカラー変更
+            &:nth-child(2) {
+              li::before {
+                background: #b02921 !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #b02921;
+              }
+            }
+            &:nth-child(3) {
+              li::before {
+                background: #e57e3a !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #e57e3a;
+              }
+            }
+            &:nth-child(4) {
+              li::before {
+                background: #7a5f51 !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #7a5f51;
+              }
+            }
+            &:nth-child(5) {
+              li::before {
+                background: #3a4da5 !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #3a4da5;
+              }
+            }
+            &:nth-child(6) {
+              li::before {
+                background: #84929c !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #84929c;
+              }
+            }
+            &:nth-child(7) {
+              li::before {
+                background: #3d8068 !important;
+              }
+
+              .aboutUsLinksItemTitle {
+                border-bottom: 1px solid #3d8068;
+              }
+            }
+          }
+
+          &::before {
+            z-index: -1;
+            position: absolute;
+            left: 60px;
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            width: 8px;
+            height: calc(100% - 40px);
+            background: $colorClasimazuGray2;
+          }
+        }
+      }
     }
   }
 }

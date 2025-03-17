@@ -2,6 +2,10 @@
 
 <footer>
     <div class="footerInner">
+        <div class="footerLinkArea">
+            <a href="<?php echo home_url(); ?>/sitemap" class="footerLink">サイトマップ</a>
+            <a href="<?php echo home_url(); ?>/privacy" class="footerLink">プライバシーポリシー</a>
+        </div>
         <p class="footerCopy">くらしのまん中に、<span class="TextRed">アイ</span>がある。</p>
         <p class="footerLogo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">

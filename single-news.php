@@ -20,7 +20,7 @@ $thumbnail = get_the_post_thumbnail_url();
         <?php echo $content; ?>
     </div>
     <a href="<?php echo home_url('/archive-news'); ?>" class="backButton">
-        <div class="arrow32 blue">←</div>
+        <div class="arrow32">←</div>
         <p>一覧に戻る</p>
     </a>
     <?php generateCTAComponent(); ?>

@@ -6,6 +6,7 @@
 
   // メインビジュアル
   #mv {
+    overflow: hidden;
     .mvSwiper {
       width: 100%;
       .swiper-wrapper {
@@ -23,7 +24,7 @@
     .mvBottom {
       position: relative;
       background: $colorCsBackground;
-      height: 10000px;
+      height: 630px;
 
       .mvNews {
         z-index: 1;
@@ -145,65 +146,6 @@
     }
   }
 
-  // clasimazuについて
-  #aboutUs {
-    position: relative;
-    width: 100%;
-
-    .aboutUsInner {
-      max-width: 1040px;
-      margin-inline: auto;
-      padding-block: 80px;
-      .sectionTitleWrapper {
-        .sectionTitleJapanese {
-          span:last-child {
-            font-weight: 700;
-          }
-        }
-      }
-
-      .aboutUsImage {
-        width: 100%;
-        img {
-          width: 100%;
-        }
-      }
-
-      .button {
-        margin-top: 40px;
-        margin-inline: auto;
-      }
-    }
-
-    .aboutUsShape1 {
-      width: 538px;
-      height: 443px;
-      position: absolute;
-      top: 120px;
-      left: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .aboutUsShape2 {
-      width: 538px;
-      height: 534px;
-      position: absolute;
-      bottom: -120px;
-      right: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
   // 代表メッセージ
   #message {
     position: relative;
@@ -220,7 +162,6 @@
       gap: 64px;
 
       .messageLeft {
-        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -249,7 +190,8 @@
       }
 
       .messageRight {
-        width: 100%;
+        flex-shrink: 0;
+        width: 648px;
 
         picture,
         img {
@@ -280,23 +222,215 @@
   }
 
   // ctaエリア
-  #ctaArea {
-    width: 100%;
-    height: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-
-    a {
-      z-index: 1;
-    }
+  .ctaComponent {
+    position: relative;
+    z-index: 10;
   }
 
   #contact {
     @media screen and (max-width: $tabletBreakPoint) {
       width: 100%;
       margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    #mv {
+      // .mvSwiper {
+      //   .swiper-wrapper {
+      //     .swiper-slide {
+      //       img {
+      //       }
+      //     }
+      //   }
+      // }
+
+      .mvBottom {
+        height: auto;
+        .mvNews {
+          height: auto;
+          position: relative;
+          padding: 24px 0px;
+          justify-content: center;
+
+          .mvNewsInner {
+            gap: 4px;
+
+            .mvNewsSectionTitle {
+            }
+
+            .mvNewsContent {
+              flex-direction: column;
+              gap: 4px;
+
+              .mvNewsDate {
+              }
+
+              .mvNewsTitle {
+              }
+            }
+          }
+
+          &:hover {
+            .mvNewsInner {
+            }
+          }
+        }
+
+        .mvCopyArea {
+          width: 100%;
+          top: -540px;
+          left: 50%;
+          transform: translate(-50%, 0);
+
+          .mvCopy {
+            width: calc(100% - 40px);
+            margin-inline: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .mvCopyText {
+            display: none;
+          }
+
+          .mvCopyLogo {
+            display: none;
+          }
+        }
+
+        .mvBottomCopyArea {
+          width: calc(100% - 40px);
+          margin-inline: auto;
+          position: relative;
+          bottom: 0;
+          left: 0;
+
+          .mvBottomCopy {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 2;
+          }
+
+          .mvBottomLogo {
+            margin-top: 40px;
+            height: 52px;
+
+            a,
+            img {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+
+        .mvBottomImages {
+          z-index: 1;
+          margin-top: 120px;
+          position: relative;
+          width: calc(100% - 40px);
+          margin-inline: auto;
+          left: 0;
+          bottom: 40px;
+
+          picture {
+            width: 100%;
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .mvBottomShape1 {
+          width: 188px;
+          height: 132px;
+          top: 20px;
+          right: 20px;
+          left: auto;
+          bottom: auto;
+
+          img {
+          }
+        }
+        .mvBottomShape2 {
+          width: 259px;
+          height: 192px;
+          bottom: 60px;
+          right: 0px;
+          top: auto;
+          left: auto;
+
+          img {
+          }
+        }
+      }
+    }
+
+    #message {
+      overflow: hidden;
+      padding-block: 40px;
+
+      .messageInner {
+        width: calc(100% - 40px);
+        margin-inline: auto;
+        flex-direction: column;
+        align-items: center;
+
+        .messageLeft {
+          gap: 24px;
+
+          .messagePicture {
+            width: 100%;
+            height: auto;
+          }
+
+          .messageText {
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          .messageName {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+          }
+        }
+      }
+
+      .messageShape1 {
+        width: 264px;
+        height: 208px;
+        bottom: 20px;
+        right: -140px;
+        left: auto;
+        top: auto;
+      }
+    }
+
+    #aboutUs {
+      overflow: hidden;
+      .aboutUsShape1 {
+        width: 188px;
+        height: 132px;
+        top: 94px;
+        left: -39px;
+        right: auto;
+      }
+
+      .aboutUsShape2 {
+        width: 259px;
+        height: 192px;
+        bottom: auto;
+        top: 429px;
+        right: -24px;
+      }
     }
   }
 }

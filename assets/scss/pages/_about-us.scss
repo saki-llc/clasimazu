@@ -1,0 +1,44 @@
+@use "../reset";
+@use "../var" as *;
+
+.page-id-48 {
+  .aboutUsInner {
+    margin-top: 80px;
+    padding-bottom: 0 !important;
+    margin-bottom: -80px !important;
+
+    .aboutUsCopyArea {
+      margin-bottom: 24px;
+
+      .aboutUsCopyEnglish {
+        font-weight: 600;
+        line-height: 2;
+      }
+
+      .aboutUsCopyJapanese {
+        margin-top: 16px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .aboutUsCopyParagraph {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+
+    .button {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @media screen and (max-width: $tabletBreakPoint) {
+    .aboutUsInner {
+      margin-top: 40px;
+      padding: 0 !important;
+    }
+  }
+}

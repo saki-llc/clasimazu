@@ -33,16 +33,47 @@
             </p>
         <?php endif; ?>
         <div class="headerRight">
-            <nav class="headerNav--pc">
+            <nav class="headerNavPc">
                 <ul>
+                    <li><a href="<?php echo home_url(); ?>/about-us">clas<span class="textRed">i</span>mazu</a></li>
                     <li><a href="<?php echo home_url(); ?>/message">Message</a></li>
                     <li><a href="<?php echo home_url(); ?>/archive-news">News</a></li>
-                    <li><a href="<?php echo home_url(); ?>/success-story">Success story</a></li>
+                    <li><a href="<?php echo home_url(); ?>/success-story">Case</a></li>
                     <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
                 </ul>
             </nav>
             <?php generateButtonMain('お問い合わせ', '/contact', 'button200'); ?>
         </div>
+        <button class="headerHamburgerButton spOnly">
+            <span class="headerHamburgerButtonLine"></span>
+            <span class="headerHamburgerButtonLine"></span>
+            <span class="headerHamburgerButtonLine"></span>
+        </button>
+        <nav class="spGlobalNav">
+            <ul>
+                <li>
+                    <a href="<?php echo home_url(); ?>/about-us">clas<span class="textRed">i</span>mazu</a>
+                    <div class="arrow32 red">→</div>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/message">Message</a>
+                    <div class="arrow32 red">→</div>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/archive-news">News</a>
+                    <div class="arrow32 red">→</div>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/success-story">Case</a>
+                    <div class="arrow32 red">→</div>
+                </li>
+                <li>
+                    <a href="<?php echo home_url(); ?>/contact">Contact</a>
+                    <div class="arrow32 red">→</div>
+                </li>
+            </ul>
+            <?php generateButtonMain('お問い合わせ', '/contact', 'button208'); ?>
+        </nav>
     </header>
 
     <main>
