@@ -87,7 +87,7 @@
                     height="104"
                     alt="くらしのまん中に、アイがある。" />
             </h2>
-            <p class="mvCopyText animate">
+            <p class="mvCopyText animate temporaryHidden">
                 プレミアムカーやI0T
                 <br />
                 （あらゆるモノをインターネットやネットワークに接続する技術）を
