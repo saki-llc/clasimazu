@@ -351,6 +351,11 @@ a {
     font-family: "Futura", sans-serif;
     font-size: 32px;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $colorClasimazuRed;
+    }
   }
 
   .contactBusinessHours {
@@ -371,14 +376,30 @@ a {
   padding: 12px 32px;
   border-radius: 50vh;
   width: fit-content;
+  background: $colorWhite;
+  transition: all 0.5s ease;
 
   p {
     font-weight: 500;
     font-size: 20px;
+    transition: all 0.5s ease;
   }
 
   @media screen and (max-width: $tabletBreakPoint) {
     margin-top: 40px;
+  }
+
+  &:hover {
+    background: $colorClasimazuNavy;
+
+    p {
+      color: $colorWhite;
+    }
+
+    .arrow32 {
+      background: $colorWhite;
+      color: $colorClasimazuNavy;
+    }
   }
 }
 
@@ -393,6 +414,7 @@ a {
   font-size: 12px;
   background: $colorClasimazuNavy;
   color: $colorWhite;
+  transition: all 0.5s ease;
 
   &.red {
     background: $colorClasimazuRed;
@@ -416,6 +438,11 @@ a {
     font-weight: 500;
     line-height: 1;
     color: $colorClasimazuGray2;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $colorClasimazuNavy;
+    }
 
     &.current {
       color: $colorClasimazuNavy;
@@ -432,6 +459,11 @@ a {
       background: $colorClasimazuNavy;
       color: $colorWhite;
       font-size: 12px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $colorClasimazuRed;
+      }
     }
 
     &.prev {

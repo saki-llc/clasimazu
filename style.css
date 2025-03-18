@@ -711,6 +711,10 @@ a {
   font-family: "Futura", sans-serif;
   font-size: 32px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+#contact .contactTel:hover {
+  color: #ac0018;
 }
 #contact .contactBusinessHours {
   font-size: 14px;
@@ -730,15 +734,28 @@ a {
   border-radius: 50vh;
   width: -moz-fit-content;
   width: fit-content;
+  background: #fff;
+  transition: all 0.5s ease;
 }
 .backButton p {
   font-weight: 500;
   font-size: 20px;
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 960px) {
   .backButton {
     margin-top: 40px;
   }
+}
+.backButton:hover {
+  background: #1a2c44;
+}
+.backButton:hover p {
+  color: #fff;
+}
+.backButton:hover .arrow32 {
+  background: #fff;
+  color: #1a2c44;
 }
 
 .arrow32 {
@@ -752,6 +769,7 @@ a {
   font-size: 12px;
   background: #1a2c44;
   color: #fff;
+  transition: all 0.5s ease;
 }
 .arrow32.red {
   background: #ac0018;
@@ -774,6 +792,10 @@ a {
   font-weight: 500;
   line-height: 1;
   color: #aaaaaa;
+  transition: all 0.3s ease-in-out;
+}
+.pagination .page-numbers:hover {
+  color: #1a2c44;
 }
 .pagination .page-numbers.current {
   color: #1a2c44;
@@ -788,6 +810,10 @@ a {
   background: #1a2c44;
   color: #fff;
   font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.pagination .page-numbers.prev:hover, .pagination .page-numbers.next:hover {
+  background: #ac0018;
 }
 .pagination .page-numbers.prev {
   margin-right: 16px;
@@ -1091,11 +1117,15 @@ header {
 header .headerLogo {
   z-index: 100;
   height: 64px;
+  transition: all 0.3s ease;
 }
 header .headerLogo img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .headerLogo:hover {
+  opacity: 0.7;
 }
 header .headerRight {
   z-index: 100;
@@ -1112,6 +1142,10 @@ header .headerRight .headerNavPc ul li a {
   font-size: 14px;
   font-weight: 600;
   color: #1a2c44;
+  transition: all 0.3s ease;
+}
+header .headerRight .headerNavPc ul li a:hover {
+  opacity: 0.7;
 }
 header .headerRight .button span:first-child {
   font-size: 14px !important;
@@ -1327,7 +1361,6 @@ Version: 1.0
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  transition: all 0.3s ease-in-out;
 }
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsSectionTitle {
   font-size: 14px;
@@ -1337,6 +1370,10 @@ Version: 1.0
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent {
   display: flex;
   gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent:hover {
+  opacity: 0.6;
 }
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent .mvNewsDate {
   font-size: 12px;
@@ -1345,9 +1382,6 @@ Version: 1.0
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent .mvNewsTitle {
   font-size: 12px;
   font-weight: 500;
-}
-.home #mv .mvBottom .mvNews:hover .mvNewsInner {
-  opacity: 0.5;
 }
 .home #mv .mvBottom .mvCopyArea {
   z-index: 1;
@@ -1908,9 +1942,10 @@ Version: 1.0
   position: relative;
   display: flex;
   gap: 20px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-inline: 24px;
+  padding-block: 24px;
   border-bottom: 1px solid #f0f0f0;
+  transition: all 0.5s ease;
 }
 .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
   flex-shrink: 0;
@@ -1946,7 +1981,7 @@ Version: 1.0
 .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem::after {
   content: "→";
   position: absolute;
-  right: 0;
+  right: 24px;
   top: 50%;
   transform: translate(0, -50%);
   width: 32px;
@@ -1959,6 +1994,15 @@ Version: 1.0
   font-size: 12px;
   border: 1px solid #1a2c44;
   color: #1a2c44;
+  transition: all 0.5s ease;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem:hover {
+  background: #f0f0f0;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem:hover::after {
+  background: #ac0018;
+  color: #fff;
+  border-color: #ac0018;
 }
 @media screen and (max-width: 960px) {
   .post-type-archive-news .archiveNewsInner {
@@ -1966,8 +2010,8 @@ Version: 1.0
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem {
     gap: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-block: 20px;
+    padding-inline: 0;
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
     width: 120px;
@@ -1984,6 +2028,9 @@ Version: 1.0
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemExcerpt {
     display: none;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem::after {
+    right: 0;
   }
 }
 

@@ -45,7 +45,6 @@
           flex-direction: column;
           justify-content: center;
           gap: 8px;
-          transition: all 0.3s ease-in-out;
 
           .mvNewsSectionTitle {
             font-size: 14px;
@@ -56,6 +55,11 @@
           .mvNewsContent {
             display: flex;
             gap: 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 0.6;
+            }
 
             .mvNewsDate {
               font-size: 12px;
@@ -66,12 +70,6 @@
               font-size: 12px;
               font-weight: 500;
             }
-          }
-        }
-
-        &:hover {
-          .mvNewsInner {
-            opacity: 0.5;
           }
         }
       }
