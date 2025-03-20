@@ -116,14 +116,14 @@ function generateAboutUsLinksComponent()
         height="974"
         alt="くらしまずの事業説明グラフィック"
         class="animate" />
-      <a class="aboutUsLinkItem aboutUsLinkItem1" href="https://www.google.com" target="_blank">
+      <a class="aboutUsLinkItem aboutUsLinkItem1" href="https://shimazugumi.com/" target="_blank">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
           width="120"
           height="120"
           alt="建築事業部のアイコン" />
       </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem2" href="https://www.google.com" target="_blank">
+      <a class="aboutUsLinkItem aboutUsLinkItem2" href="https://era-shimazugumi.com/" target="_blank">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon2.webp"
           width="120"
