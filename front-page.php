@@ -110,14 +110,14 @@
                 <br />
                 くらしのまん中に<span class="textRed">i(愛)</span>がある
             </p>
-            <p class="mvCopyLogo pcOnly animate">
+            <p class="mvCopyLogo pcOnly animate temporaryHidden">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/clasimazu_logo.svg" alt="clasimazuロゴ">
                 </a>
             </p>
         </div>
         <div class="mvBottomCopyArea spOnly">
-            <p class="mvBottomCopy animate">
+            <p class="mvBottomCopy animate temporaryHidden">
                 プレミアムカーやI0T
                 <br />
                 （あらゆるモノをインターネットやネットワークに接続する技術）を
@@ -148,12 +148,12 @@
         </div>
         <div class="mvBottomImages animate">
             <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp@2x.webp 2x" media="max-width: <?php echo $spBreakPoint; ?>px">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_sp@2x.webp 2x" media="(max-width: 960px)">
                 <img
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_pc.webp"
                     srcset="<?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_pc.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/front/mv_bottom_images_pc@2x.webp 2x"
-                    width="628"
-                    height="391"
+                    width="960"
+                    height="600"
                     alt="施工事例イメージ" />
             </picture>
         </div>
