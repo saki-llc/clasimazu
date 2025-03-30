@@ -8,7 +8,6 @@
 
     <title><?php echo esc_html(get_bloginfo('name')) ?></title>
     <meta name="description" content=<?php echo esc_attr(get_bloginfo('description')) ?> />
-    <meta name="robots" content="noindex">
 
     <!-- OGPはプラグインで設定 -->
 
