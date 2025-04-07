@@ -6,6 +6,10 @@
   font-feature-settings: "palt";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
@@ -351,6 +355,11 @@ a {
     font-family: "Futura", sans-serif;
     font-size: 32px;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $colorClasimazuRed;
+    }
   }
 
   .contactBusinessHours {
@@ -371,14 +380,30 @@ a {
   padding: 12px 32px;
   border-radius: 50vh;
   width: fit-content;
+  background: $colorWhite;
+  transition: all 0.5s ease;
 
   p {
     font-weight: 500;
     font-size: 20px;
+    transition: all 0.5s ease;
   }
 
   @media screen and (max-width: $tabletBreakPoint) {
     margin-top: 40px;
+  }
+
+  &:hover {
+    background: $colorClasimazuNavy;
+
+    p {
+      color: $colorWhite;
+    }
+
+    .arrow32 {
+      background: $colorWhite;
+      color: $colorClasimazuNavy;
+    }
   }
 }
 
@@ -393,6 +418,7 @@ a {
   font-size: 12px;
   background: $colorClasimazuNavy;
   color: $colorWhite;
+  transition: all 0.5s ease;
 
   &.red {
     background: $colorClasimazuRed;
@@ -416,6 +442,11 @@ a {
     font-weight: 500;
     line-height: 1;
     color: $colorClasimazuGray2;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $colorClasimazuNavy;
+    }
 
     &.current {
       color: $colorClasimazuNavy;
@@ -432,6 +463,11 @@ a {
       background: $colorClasimazuNavy;
       color: $colorWhite;
       font-size: 12px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $colorClasimazuRed;
+      }
     }
 
     &.prev {
@@ -580,6 +616,7 @@ a {
 
   @media screen and (max-width: $tabletBreakPoint) {
     .aboutUsInner {
+      max-width: 100%;
       padding-block: 40px;
       padding-inline: 20px;
 
@@ -597,17 +634,89 @@ a {
           }
         }
 
+        .aboutUsLinksInner {
+          position: relative;
+          margin-inline: auto;
+          padding-top: 80px;
+          max-width: 380px;
+
+          .baseImage {
+            display: block;
+            width: calc(100% - 40px);
+            max-width: 340px;
+            margin-inline: auto;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .aboutUsLinkItem {
+            position: absolute;
+            width: 20vw;
+            height: 20vw;
+            max-width: 84px;
+            max-height: 84px;
+            transform: translate(-50%, -50%);
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            &:nth-child(2) {
+              top: 29%;
+              left: 50%;
+            }
+            &:nth-child(3) {
+              top: 37%;
+              left: 77%;
+            }
+            &:nth-child(4) {
+              top: 61%;
+              left: 89%;
+            }
+            &:nth-child(5) {
+              top: 86%;
+              left: 79%;
+            }
+            &:nth-child(6) {
+              top: 86%;
+              left: 21%;
+            }
+            &:nth-child(7) {
+              top: 61%;
+              left: 12%;
+            }
+            &:nth-child(8) {
+              top: 37%;
+              left: 23%;
+            }
+
+            &:hover {
+              opacity: 0.8;
+              transform: translate(-50%, -50%) scale(1.05);
+            }
+          }
+        }
+
         .aboutUsLinksList {
           position: relative;
           margin-top: 56px;
           display: flex;
           flex-direction: column;
-          gap: 48px;
 
           .aboutUsLinksItem {
             display: flex;
             justify-content: space-between;
             gap: 24px;
+
+            &:not(:first-child) {
+              padding-top: 48px;
+            }
 
             .aboutUsLinksItemIcon {
               flex-shrink: 0;
@@ -765,4 +874,19 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ===============================================
+ *  明朝
+ =============================================== */
+.mincho {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+}
+
+/* ===============================================
+ *  一時的に非表示
+ =============================================== */
+.temporaryHidden {
+  display: none;
 }

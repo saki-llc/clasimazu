@@ -13,9 +13,10 @@
         position: relative;
         display: flex;
         gap: 20px;
-        padding-bottom: 24px;
-        margin-bottom: 24px;
+        padding-inline: 24px;
+        padding-block: 24px;
         border-bottom: 1px solid $colorClasimazuGray3;
+        transition: all 0.5s ease;
 
         .archiveNewsItemThumbnail {
           flex-shrink: 0;
@@ -56,7 +57,7 @@
         &::after {
           content: "→";
           position: absolute;
-          right: 0;
+          right: 24px;
           top: 50%;
           transform: translate(0, -50%);
           width: 32px;
@@ -69,6 +70,17 @@
           font-size: 12px;
           border: 1px solid $colorClasimazuNavy;
           color: $colorClasimazuNavy;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          background: $colorClasimazuGray3;
+
+          &::after {
+            background: $colorClasimazuRed;
+            color: $colorWhite;
+            border-color: $colorClasimazuRed;
+          }
         }
       }
     }
@@ -81,8 +93,8 @@
       .archiveNewsList {
         .archiveNewsItem {
           gap: 16px;
-          padding-bottom: 16px;
-          margin-bottom: 16px;
+          padding-block: 20px;
+          padding-inline: 0;
 
           .archiveNewsItemThumbnail {
             width: 120px;
@@ -103,6 +115,10 @@
             .archiveNewsItemExcerpt {
               display: none;
             }
+          }
+
+          &::after {
+            right: 0;
           }
         }
       }

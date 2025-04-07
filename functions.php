@@ -6,7 +6,7 @@
 function my_theme_scripts()
 {
   // Google Fonts
-  wp_enqueue_style('montserratNotoFont', "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
+  wp_enqueue_style('montserratNotoFont', "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap");
 
   // Swiper
   wp_enqueue_style('swiperStyle', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
@@ -116,14 +116,14 @@ function generateAboutUsLinksComponent()
         height="974"
         alt="くらしまずの事業説明グラフィック"
         class="animate" />
-      <a class="aboutUsLinkItem aboutUsLinkItem1" href="https://www.google.com" target="_blank">
+      <a class="aboutUsLinkItem aboutUsLinkItem1" href="https://shimazugumi.com/" target="_blank">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
           width="120"
           height="120"
           alt="建築事業部のアイコン" />
       </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem2" href="https://www.google.com" target="_blank">
+      <a class="aboutUsLinkItem aboutUsLinkItem2" href="https://era-shimazugumi.com/" target="_blank">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon2.webp"
           width="120"
@@ -168,16 +168,78 @@ function generateAboutUsLinksComponent()
       <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
     </div>
   </div>
+
   <div class="aboutUsLinksSpOnly spOnly">
-    <p class="aboutUsLinksLogo animate">
+    <!-- <p class="aboutUsLinksLogo animate">
       <img
         src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/logo_box.svg"
         width="201"
         height="124"
         alt="くらしまずのロゴ" />
-    </p>
-    <div class="aboutUsLinksList animate">
-      <div class="aboutUsLinksItem animate">
+    </p> -->
+    <div class="aboutUsLinksInner animate">
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_sp.webp"
+        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_sp.webp 1x, <?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/base_sp@2x.webp 2x"
+        width="1040"
+        height="974"
+        alt="くらしまずの事業説明グラフィック"
+        class="animate baseImage" />
+      <a class="aboutUsLinkItem aboutUsLinkItem1" href="#aboutUsLinksItem1">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
+          width="120"
+          height="120"
+          alt="建築事業部のアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem2" href="#aboutUsLinksItem2">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon2.webp"
+          width="120"
+          height="120"
+          alt="不動産事業部のアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem3" href="#aboutUsLinksItem3">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon3.webp"
+          width="120"
+          height="120"
+          alt="ぱぷりか 訪問看護ステーションのアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem4" href="#aboutUsLinksItem4">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon4.webp"
+          width="120"
+          height="120"
+          alt="士業連携のアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem5" href="#aboutUsLinksItem5">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon5.webp"
+          width="120"
+          height="120"
+          alt="信託事業のアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem6" href="#aboutUsLinksItem6">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon6.webp"
+          width="120"
+          height="120"
+          alt="資金（FP）相談のアイコン" />
+      </a>
+      <a class="aboutUsLinkItem aboutUsLinkItem7" href="#aboutUsLinksItem7">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon7.webp"
+          width="120"
+          height="120"
+          alt="鉄道事業部のアイコン" />
+      </a>
+      <?php
+      //generateButtonMain('詳細を見る', '#', 'button208');
+      ?>
+    </div>
+    <div class="aboutUsLinksList">
+      <div id="aboutUsLinksItem1" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon1.webp"
@@ -203,7 +265,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem2" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon2.webp"
@@ -228,7 +290,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem3" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon3.webp"
@@ -257,7 +319,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem4" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon4.webp"
@@ -282,7 +344,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem5" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon5.webp"
@@ -301,14 +363,17 @@ function generateAboutUsLinksComponent()
             <p class="aboutUsLinksItemTitleText">信託事業</p>
           </div>
           <ul class="aboutUsLinksItemList">
-            <li>新築・リノベーション</li>
-            <li>リフォーム・非住宅</li>
-            <li>定期訪問</li>
-            <li>アフターメンテナンス</li>
+            <li>民事信託コンサルティング</li>
+            <li>投資助言・代理</li>
+            <li>事業アレンジ</li>
+            <li>不動産証券化アレンジ</li>
+            <li>第二種金融商品取引業</li>
+            <li>プレミアムカーファンド</li>
+            <li>リスクマネジメント</li>
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem6" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon6.webp"
@@ -333,7 +398,7 @@ function generateAboutUsLinksComponent()
           </ul>
         </div>
       </div>
-      <div class="aboutUsLinksItem animate">
+      <div id="aboutUsLinksItem7" class="aboutUsLinksItem">
         <a class="aboutUsLinksItemIcon" href="https://www.google.com" target="_blank">
           <img
             src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon7.webp"
@@ -359,6 +424,8 @@ function generateAboutUsLinksComponent()
         </div>
       </div>
     </div>
-    <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
+    <?php
+    // generateButtonMain('詳細を見る', '#', 'button208');
+    ?>
   </div>
 <?php }

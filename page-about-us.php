@@ -1,5 +1,17 @@
 <?php get_header(); ?>
-<?php generateSubPageHeader('Clasimazuとは', 'About Clasimazu'); ?>
+<section class="subPageHeader">
+    <picture>
+        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/subpage_header_sp.svg" media="max-width: 960px">
+        <img
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/common/subpage_header_pc.svg"
+            width="1440"
+            height="442" />
+    </picture>
+    <hgroup class="subPageHeaderTitle">
+        <h1 class="subPageHeaderTitleJapanese">clas<span class="textRed">i</span>mazuについて</h1>
+        <p class="subPageHeaderTitleEnglish">About</p>
+    </hgroup>
+</section>
 
 <section id="aboutUs">
     <div class="aboutUsInner inner1040">
@@ -17,7 +29,7 @@
                 <br><br>
                 その入り口がclas<span class="textRed">i</span>mazu（島津組サービスブランドの総称）です。
                 <br>
-                くらしのまん中に<span class="textRed">i(愛)</span>がある。
+                <span class="mincho">くらしのまん中に<span class="textRed">i(愛)</span>がある。</span>
             </p>
         </div>
         <?php generateAboutUsLinksComponent(); ?>

@@ -391,6 +391,10 @@ Version: 1.0
   font-feature-settings: "palt";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
@@ -711,6 +715,10 @@ a {
   font-family: "Futura", sans-serif;
   font-size: 32px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+#contact .contactTel:hover {
+  color: #ac0018;
 }
 #contact .contactBusinessHours {
   font-size: 14px;
@@ -730,15 +738,28 @@ a {
   border-radius: 50vh;
   width: -moz-fit-content;
   width: fit-content;
+  background: #fff;
+  transition: all 0.5s ease;
 }
 .backButton p {
   font-weight: 500;
   font-size: 20px;
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 960px) {
   .backButton {
     margin-top: 40px;
   }
+}
+.backButton:hover {
+  background: #1a2c44;
+}
+.backButton:hover p {
+  color: #fff;
+}
+.backButton:hover .arrow32 {
+  background: #fff;
+  color: #1a2c44;
 }
 
 .arrow32 {
@@ -752,6 +773,7 @@ a {
   font-size: 12px;
   background: #1a2c44;
   color: #fff;
+  transition: all 0.5s ease;
 }
 .arrow32.red {
   background: #ac0018;
@@ -774,6 +796,10 @@ a {
   font-weight: 500;
   line-height: 1;
   color: #aaaaaa;
+  transition: all 0.3s ease-in-out;
+}
+.pagination .page-numbers:hover {
+  color: #1a2c44;
 }
 .pagination .page-numbers.current {
   color: #1a2c44;
@@ -788,6 +814,10 @@ a {
   background: #1a2c44;
   color: #fff;
   font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.pagination .page-numbers.prev:hover, .pagination .page-numbers.next:hover {
+  background: #ac0018;
 }
 .pagination .page-numbers.prev {
   margin-right: 16px;
@@ -918,6 +948,7 @@ a {
 }
 @media screen and (max-width: 960px) {
   #aboutUs .aboutUsInner {
+    max-width: 100%;
     padding-block: 40px;
     padding-inline: 20px;
   }
@@ -933,17 +964,84 @@ a {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner {
+    position: relative;
+    margin-inline: auto;
+    padding-top: 80px;
+    max-width: 380px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .baseImage {
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 340px;
+    margin-inline: auto;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    max-width: 84px;
+    max-height: 84px;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(2) {
+    top: 29%;
+    left: 50%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(3) {
+    top: 37%;
+    left: 77%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(4) {
+    top: 61%;
+    left: 89%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(5) {
+    top: 86%;
+    left: 79%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(6) {
+    top: 86%;
+    left: 21%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(7) {
+    top: 61%;
+    left: 12%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(8) {
+    top: 37%;
+    left: 23%;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:hover {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList {
     position: relative;
     margin-top: 56px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+  }
+  #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem:not(:first-child) {
+    padding-top: 48px;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksList .aboutUsLinksItem .aboutUsLinksItemIcon {
     flex-shrink: 0;
@@ -1070,6 +1168,21 @@ a {
     transform: translateY(0);
   }
 }
+/* ===============================================
+ *  明朝
+ =============================================== */
+.mincho {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+}
+
+/* ===============================================
+ *  一時的に非表示
+ =============================================== */
+.temporaryHidden {
+  display: none;
+}
+
 /*
 Theme Name: くらしまず 2025
 Author: Fujisaki Wahei
@@ -1091,11 +1204,15 @@ header {
 header .headerLogo {
   z-index: 100;
   height: 64px;
+  transition: all 0.3s ease;
 }
 header .headerLogo img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .headerLogo:hover {
+  opacity: 0.7;
 }
 header .headerRight {
   z-index: 100;
@@ -1112,6 +1229,10 @@ header .headerRight .headerNavPc ul li a {
   font-size: 14px;
   font-weight: 600;
   color: #1a2c44;
+  transition: all 0.3s ease;
+}
+header .headerRight .headerNavPc ul li a:hover {
+  opacity: 0.7;
 }
 header .headerRight .button span:first-child {
   font-size: 14px !important;
@@ -1307,6 +1428,8 @@ Version: 1.0
   position: relative;
   background: #f8f6f1;
   height: 630px;
+  display: flex;
+  align-items: center;
 }
 .home #mv .mvBottom .mvNews {
   z-index: 1;
@@ -1327,7 +1450,6 @@ Version: 1.0
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  transition: all 0.3s ease-in-out;
 }
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsSectionTitle {
   font-size: 14px;
@@ -1337,6 +1459,10 @@ Version: 1.0
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent {
   display: flex;
   gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent:hover {
+  opacity: 0.6;
 }
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent .mvNewsDate {
   font-size: 12px;
@@ -1345,9 +1471,6 @@ Version: 1.0
 .home #mv .mvBottom .mvNews .mvNewsInner .mvNewsContent .mvNewsTitle {
   font-size: 12px;
   font-weight: 500;
-}
-.home #mv .mvBottom .mvNews:hover .mvNewsInner {
-  opacity: 0.5;
 }
 .home #mv .mvBottom .mvCopyArea {
   z-index: 1;
@@ -1374,16 +1497,16 @@ Version: 1.0
      object-fit: cover;
 }
 .home #mv .mvBottom .mvBottomImages {
-  width: 628px;
-  position: absolute;
-  bottom: 134px;
-  left: calc((100% - 1040px) / 2);
+  max-width: 100%;
+  width: 1040px;
+  aspect-ratio: 2218/782;
+  margin-left: calc((100% - 1040px) / 2);
 }
 .home #mv .mvBottom .mvBottomImages picture,
 .home #mv .mvBottom .mvBottomImages img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home #mv .mvBottom .mvBottomShape1 {
   width: 404px;
@@ -1486,13 +1609,15 @@ Version: 1.0
 }
 @media screen and (max-width: 960px) {
   .home #mv .mvBottom {
+    padding-block: 120px;
     height: auto;
+    flex-direction: column;
   }
   .home #mv .mvBottom .mvNews {
     height: auto;
-    position: relative;
-    padding: 24px 0px;
-    justify-content: center;
+    width: 100%;
+    padding: 24px;
+    justify-content: start;
   }
   .home #mv .mvBottom .mvNews .mvNewsInner {
     gap: 4px;
@@ -1625,7 +1750,7 @@ Version: 1.0
     width: 259px;
     height: 192px;
     bottom: auto;
-    top: 429px;
+    top: 800px;
     right: -24px;
   }
 }
@@ -1908,9 +2033,10 @@ Version: 1.0
   position: relative;
   display: flex;
   gap: 20px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-inline: 24px;
+  padding-block: 24px;
   border-bottom: 1px solid #f0f0f0;
+  transition: all 0.5s ease;
 }
 .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
   flex-shrink: 0;
@@ -1946,7 +2072,7 @@ Version: 1.0
 .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem::after {
   content: "→";
   position: absolute;
-  right: 0;
+  right: 24px;
   top: 50%;
   transform: translate(0, -50%);
   width: 32px;
@@ -1959,6 +2085,15 @@ Version: 1.0
   font-size: 12px;
   border: 1px solid #1a2c44;
   color: #1a2c44;
+  transition: all 0.5s ease;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem:hover {
+  background: #f0f0f0;
+}
+.post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem:hover::after {
+  background: #ac0018;
+  color: #fff;
+  border-color: #ac0018;
 }
 @media screen and (max-width: 960px) {
   .post-type-archive-news .archiveNewsInner {
@@ -1966,8 +2101,8 @@ Version: 1.0
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem {
     gap: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-block: 20px;
+    padding-inline: 0;
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemThumbnail {
     width: 120px;
@@ -1984,6 +2119,9 @@ Version: 1.0
   }
   .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem .archiveNewsItemText .archiveNewsItemExcerpt {
     display: none;
+  }
+  .post-type-archive-news .archiveNewsInner .archiveNewsList .archiveNewsItem::after {
+    right: 0;
   }
 }
 

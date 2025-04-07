@@ -25,6 +25,8 @@
       position: relative;
       background: $colorCsBackground;
       height: 630px;
+      display: flex;
+      align-items: center;
 
       .mvNews {
         z-index: 1;
@@ -45,7 +47,6 @@
           flex-direction: column;
           justify-content: center;
           gap: 8px;
-          transition: all 0.3s ease-in-out;
 
           .mvNewsSectionTitle {
             font-size: 14px;
@@ -56,6 +57,11 @@
           .mvNewsContent {
             display: flex;
             gap: 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 0.6;
+            }
 
             .mvNewsDate {
               font-size: 12px;
@@ -66,12 +72,6 @@
               font-size: 12px;
               font-weight: 500;
             }
-          }
-        }
-
-        &:hover {
-          .mvNewsInner {
-            opacity: 0.5;
           }
         }
       }
@@ -105,15 +105,15 @@
       }
 
       .mvBottomImages {
-        width: 628px;
-        position: absolute;
-        bottom: 134px;
-        left: calc((100% - 1040px) / 2);
+        max-width: 100%;
+        width: 1040px;
+        aspect-ratio: 2218 / 782;
+        margin-left: calc((100% - 1040px) / 2);
 
         picture,
         img {
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
 
@@ -246,12 +246,15 @@
       // }
 
       .mvBottom {
+        padding-block: 120px;
         height: auto;
+        flex-direction: column;
+
         .mvNews {
           height: auto;
-          position: relative;
-          padding: 24px 0px;
-          justify-content: center;
+          width: 100%;
+          padding: 24px;
+          justify-content: start;
 
           .mvNewsInner {
             gap: 4px;
@@ -428,7 +431,7 @@
         width: 259px;
         height: 192px;
         bottom: auto;
-        top: 429px;
+        top: 800px;
         right: -24px;
       }
     }

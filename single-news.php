@@ -22,9 +22,9 @@ $thumbnail = get_the_post_thumbnail_url();
     <a href="<?php echo home_url('/archive-news'); ?>" class="backButton animate">
         <div class="arrow32">←</div>
         <p>一覧に戻る</p>
-    </a>
-    <?php generateCTAComponent(); ?>
-    <?php generateContactComponent(); ?>
 </div>
+</a>
+<?php generateCTAComponent(); ?>
+<?php generateContactComponent(); ?>
 
 <?php get_footer(); ?>
