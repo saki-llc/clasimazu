@@ -79,7 +79,9 @@ function generateCTAComponent()
 { ?>
   <section class="ctaComponent animate">
     <?php generateButtonMain('お問い合わせはこちら', '/contact', 'button328'); ?>
-    <?php generateButtonMain('カタログダウンロード', '#', 'button328'); ?>
+    <?php
+    // generateButtonMain('カタログダウンロード', '#', 'button328'); 
+    ?>
   </section>
 <?php }
 
