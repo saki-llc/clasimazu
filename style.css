@@ -912,7 +912,7 @@ a {
   top: 36%;
   left: 33%;
 }
-#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:hover {
+#aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:hover:not(div) {
   opacity: 0.8;
   transform: translate(-50%, -50%) scale(1.05);
 }

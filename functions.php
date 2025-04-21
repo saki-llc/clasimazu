@@ -132,44 +132,41 @@ function generateAboutUsLinksComponent()
           height="120"
           alt="不動産事業部のアイコン" />
       </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem3" href="https://www.google.com" target="_blank">
+      <div class="aboutUsLinkItem aboutUsLinkItem3">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon3.webp"
           width="120"
           height="120"
           alt="ぱぷりか 訪問看護ステーションのアイコン" />
-      </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem4" href="https://www.google.com" target="_blank">
+      </div>
+      <div class="aboutUsLinkItem aboutUsLinkItem4">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon4.webp"
           width="120"
           height="120"
           alt="士業連携のアイコン" />
-      </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem5" href="https://www.google.com" target="_blank">
+      </div>
+      <div class="aboutUsLinkItem aboutUsLinkItem5">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon5.webp"
           width="120"
           height="120"
           alt="信託事業のアイコン" />
-      </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem6" href="https://www.google.com" target="_blank">
+      </div>
+      <div class="aboutUsLinkItem aboutUsLinkItem6">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon6.webp"
           width="120"
           height="120"
           alt="資金（FP）相談のアイコン" />
-      </a>
-      <a class="aboutUsLinkItem aboutUsLinkItem7" href="https://www.google.com" target="_blank">
+      </div>
+      <div class="aboutUsLinkItem aboutUsLinkItem7">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-clasimazu/icon7.webp"
           width="120"
           height="120"
           alt="鉄道事業部のアイコン" />
-      </a>
-      <?php
-      // generateButtonMain('詳細を見る', '#', 'button208'); 
-      ?>
+      </div>
     </div>
   </div>
 
