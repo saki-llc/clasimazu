@@ -885,31 +885,31 @@ a {
      object-fit: cover;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(2) {
-  top: 26%;
+  top: 28%;
   left: 50%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(3) {
-  top: 32%;
+  top: 36%;
   left: 67%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(4) {
-  top: 49%;
+  top: 54%;
   left: 75%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(5) {
-  top: 66%;
+  top: 73%;
   left: 68%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(6) {
-  top: 66%;
+  top: 73%;
   left: 32%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(7) {
-  top: 49%;
+  top: 54%;
   left: 25%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:nth-child(8) {
-  top: 32%;
+  top: 36%;
   left: 33%;
 }
 #aboutUs .aboutUsInner .aboutUsLinks .aboutUsLinkItem:hover {
@@ -998,7 +998,7 @@ a {
        object-fit: cover;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(2) {
-    top: 29%;
+    top: 27%;
     left: 50%;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(3) {
@@ -1006,7 +1006,7 @@ a {
     left: 77%;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(4) {
-    top: 61%;
+    top: 60%;
     left: 89%;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(5) {
@@ -1018,7 +1018,7 @@ a {
     left: 21%;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(7) {
-    top: 61%;
+    top: 60%;
     left: 12%;
   }
   #aboutUs .aboutUsInner .aboutUsLinksSpOnly .aboutUsLinksInner .aboutUsLinkItem:nth-child(8) {

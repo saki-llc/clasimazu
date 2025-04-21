@@ -167,7 +167,9 @@ function generateAboutUsLinksComponent()
           height="120"
           alt="鉄道事業部のアイコン" />
       </a>
-      <?php generateButtonMain('詳細を見る', '#', 'button208'); ?>
+      <?php
+      // generateButtonMain('詳細を見る', '#', 'button208'); 
+      ?>
     </div>
   </div>
 
